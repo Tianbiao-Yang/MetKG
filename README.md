@@ -27,6 +27,8 @@ MetKG/
 ├── model_metkg_train_validation.py      # Model training and validation
 ├── model_metkg_train_run.py             # Final model training
 ├── model_metkg_prediction.py            # Prediction using the trained model
+├── metkg.yml                            # Conda environment file
+├── metkgpip.txt                         # Pip requirements file
 ├── saved_models/                        # Directory for trained models
 ├── result/                              # Directory for prediction and analysis results
 └── README.md
@@ -34,7 +36,47 @@ MetKG/
 
 ---
 
-## 1. Model Training
+## 1. Environment Setup
+
+This repository provides two environment files:
+
+- `metkg.yml`: Conda environment file
+- `metkgpip.txt`: Pip requirements file
+
+### Option 1: Create the environment using Conda
+
+You can create the recommended Conda environment by running:
+
+```bash
+conda env create -f metkg.yml
+```
+
+Then activate the environment:
+
+```bash
+conda activate metkg
+```
+
+If the environment name defined in `metkg.yml` is different, please activate the corresponding environment name.
+
+### Option 2: Install dependencies using pip
+
+Alternatively, you can install the required Python packages using:
+
+```bash
+pip install -r metkgpip.txt
+```
+
+For PyTorch and PyTorch Geometric, please ensure that the installed versions are compatible with your CUDA and Python environment. See:
+
+```text
+https://pytorch.org/
+https://pytorch-geometric.readthedocs.io/
+```
+
+---
+
+## 2. Model Training
 
 The MetKG model can be trained and validated by running:
 
@@ -52,7 +94,7 @@ The trained model will be saved in the `saved_models/` directory.
 
 ---
 
-## 2. Model Prediction
+## 3. Model Prediction
 
 The trained model is saved at:
 
@@ -74,7 +116,7 @@ The prediction results will be saved in:
 
 ---
 
-## 3. Model Interpretability
+## 4. Model Interpretability
 
 MetKG provides model interpretability analysis based on attention-derived importance scores. These scores are used to evaluate the importance of nodes and edges in the knowledge graph.
 
@@ -87,7 +129,7 @@ The interpretability analysis can be used to:
 
 ---
 
-## 4. Baseline Models
+## 5. Baseline Models
 
 MetKG was compared with multiple baseline models and feature combinations, including:
 
@@ -103,7 +145,7 @@ These comparisons were used to evaluate the predictive performance and added val
 
 ---
 
-## 5. Output
+## 6. Output
 
 The main output files are saved in:
 
@@ -119,37 +161,6 @@ Typical outputs include:
 - attention-based edge importance scores;
 - interpretable metabolite–protein interaction networks;
 - baseline model comparison results.
-
----
-
-## 6. Requirements
-
-The model was developed using Python. The main dependencies include:
-
-```text
-python
-numpy
-pandas
-scikit-learn
-torch
-torch-geometric
-networkx
-matplotlib
-seaborn
-```
-
-You may install the required packages using:
-
-```bash
-pip install numpy pandas scikit-learn networkx matplotlib seaborn
-```
-
-For PyTorch and PyTorch Geometric, please install the versions compatible with your CUDA environment. See:
-
-```text
-https://pytorch.org/
-https://pytorch-geometric.readthedocs.io/
-```
 
 ---
 
