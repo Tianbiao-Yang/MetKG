@@ -1,2 +1,2 @@
 # MetKG
-A knowledge graph framework reveals shared immunometabolic features of aging and diabetes
+Knowledge graph-guided metabolomics reveals a kynurenine immunometabolic axis in aging and diabetes
