@@ -1,6 +1,6 @@
 # MetKG
 
-**MetKG: Knowledge graph-guided metabolomics reveals a kynurenine immunometabolic axis in aging and diabetes**
+**Knowledge graph-guided metabolomics reveals a kynurenine immunometabolic axis in aging and diabetes**
 
 This repository provides the implementation of **MetKG**, a knowledge graph-guided metabolomics framework designed to identify disease-associated metabolic mechanisms. In this study, MetKG was applied to reveal a kynurenine-related immunometabolic axis in aging and diabetes.
 
