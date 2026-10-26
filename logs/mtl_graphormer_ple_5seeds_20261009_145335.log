@@ -1,0 +1,553 @@
+========== Multi-task Graphormer + PLE: 5-seed internal validation experiment ==========
+Log file: ../logs/mtl_graphormer_ple_5seeds_20261009_145335.log
+Base seed: 42
+Repeat seeds: [42, 43, 44, 45, 46]
+=====================================================================================
+
+Using device: cuda:3
+
+1. Loading training data table
+Total samples: 50384
+HMDB metabolite columns: 23
+Extra columns: ['Sex', 'BMI']
+Age column: Age, DM column: DM
+
+2. Processing extra covariates
+
+3. Loading graph structure: nodes_list.pkl + mat_matrix.pkl
+Original graph node number N: 7647
+Measured HMDB nodes found in graph: 23
+
+4. Constructing expanded subgraph: measured nodes + one-hop neighbors
+Expanded modeling HMDB nodes: 1075
+Subgraph nodes: 1075, edges: 184898
+
+5. Applying log1p preprocessing to metabolite intensities
+
+6. Loading optional node embeddings
+Detected raw node embedding dimension: 1280
+Concentration feature dim: 3, raw node embedding dim: 1280, projected dim: 32
+
+7. Processing DM labels
+Number of DM classes: 2
+
+8. Loading or creating fixed 80:20 train/test split
+Found existing split files. Loading them.
+Development set size, original 80%: 40307
+Fixed held-out test set size, original 20%: 10077
+Important: The fixed test set will not be used for early stopping or hyperparameter tuning.
+
+Starting 5-seed internal validation experiment
+The fixed 20% test set will remain unchanged across all seeds.
+Within the original 80% development set, validation is carved out separately for each seed.
+
+
+==========================================================================================
+Running seed = 42
+Subtrain size: 35268
+Validation size: 5039
+Fixed test size: 10077
+==========================================================================================
+[Seed 42] Epoch 001 | TrainLoss=43.4678 | Train MAE=5.8306, AUC=0.7642 | Val MAE=5.8227, Val RMSE=7.1561, Val R2=0.0079, Val Acc=0.6029, Val AUC=0.7680263672779586, ValScore=6.0547
+[Seed 42] Epoch 002 | TrainLoss=2.0071 | Train MAE=5.7250, AUC=0.8199 | Val MAE=5.7058, Val RMSE=6.9601, Val R2=0.0615, Val Acc=0.7468, Val AUC=0.8226346231522144, ValScore=5.8832
+[Seed 42] Epoch 003 | TrainLoss=1.8273 | Train MAE=5.5000, AUC=0.9090 | Val MAE=5.5068, Val RMSE=7.1227, Val R2=0.0171, Val Acc=0.8057, Val AUC=0.9067942181532445, ValScore=5.6000
+[Seed 42] Epoch 004 | TrainLoss=1.7187 | Train MAE=5.4487, AUC=0.9129 | Val MAE=5.4563, Val RMSE=6.9003, Val R2=0.0775, Val Acc=0.8317, Val AUC=0.9094012351863648, ValScore=5.5469
+[Seed 42] Epoch 005 | TrainLoss=1.6751 | Train MAE=5.4915, AUC=0.9142 | Val MAE=5.5022, Val RMSE=6.7796, Val R2=0.1095, Val Acc=0.8347, Val AUC=0.910029792679999, ValScore=5.5922
+[Seed 42] Epoch 006 | TrainLoss=1.6421 | Train MAE=5.3650, AUC=0.9151 | Val MAE=5.3909, Val RMSE=6.7941, Val R2=0.1057, Val Acc=0.8333, Val AUC=0.9109852315769642, ValScore=5.4799
+[Seed 42] Epoch 007 | TrainLoss=1.5868 | Train MAE=5.3224, AUC=0.9148 | Val MAE=5.3903, Val RMSE=7.0906, Val R2=0.0259, Val Acc=0.8355, Val AUC=0.9100696485812243, ValScore=5.4802
+[Seed 42] Epoch 008 | TrainLoss=1.5223 | Train MAE=5.1489, AUC=0.9158 | Val MAE=5.2000, Val RMSE=6.7431, Val R2=0.1191, Val Acc=0.8377, Val AUC=0.9105376797375118, ValScore=5.2894
+[Seed 42] Epoch 009 | TrainLoss=1.5160 | Train MAE=5.0616, AUC=0.9174 | Val MAE=5.0953, Val RMSE=6.5225, Val R2=0.1758, Val Acc=0.8224, Val AUC=0.9131213818560814, ValScore=5.1822
+[Seed 42] Epoch 010 | TrainLoss=1.5044 | Train MAE=5.1054, AUC=0.9183 | Val MAE=5.1504, Val RMSE=6.6797, Val R2=0.1356, Val Acc=0.8395, Val AUC=0.9128034798455168, ValScore=5.2376
+[Seed 42] Epoch 011 | TrainLoss=1.4940 | Train MAE=5.0858, AUC=0.9193 | Val MAE=5.1383, Val RMSE=6.6324, Val R2=0.1478, Val Acc=0.8361, Val AUC=0.9140571291022435, ValScore=5.2242
+[Seed 42] Epoch 012 | TrainLoss=1.4871 | Train MAE=5.0811, AUC=0.9202 | Val MAE=5.1344, Val RMSE=6.6334, Val R2=0.1475, Val Acc=0.8400, Val AUC=0.9148601546219928, ValScore=5.2196
+[Seed 42] Epoch 013 | TrainLoss=1.4975 | Train MAE=5.2815, AUC=0.9200 | Val MAE=5.3422, Val RMSE=7.0679, Val R2=0.0322, Val Acc=0.8398, Val AUC=0.9145987282659311, ValScore=5.4276
+[Seed 42] Epoch 014 | TrainLoss=1.4834 | Train MAE=5.0545, AUC=0.9218 | Val MAE=5.0964, Val RMSE=6.5805, Val R2=0.1610, Val Acc=0.8315, Val AUC=0.9164522639727228, ValScore=5.1799
+[Seed 42] Epoch 015 | TrainLoss=1.4822 | Train MAE=5.0415, AUC=0.9220 | Val MAE=5.0842, Val RMSE=6.4650, Val R2=0.1902, Val Acc=0.8418, Val AUC=0.9164021684130799, ValScore=5.1678
+[Seed 42] Epoch 016 | TrainLoss=1.4815 | Train MAE=5.0974, AUC=0.9229 | Val MAE=5.1335, Val RMSE=6.3992, Val R2=0.2067, Val Acc=0.8414, Val AUC=0.9176520368728525, ValScore=5.2158
+[Seed 42] Epoch 017 | TrainLoss=1.4695 | Train MAE=5.0734, AUC=0.9234 | Val MAE=5.1182, Val RMSE=6.4239, Val R2=0.2005, Val Acc=0.8422, Val AUC=0.9176890571763621, ValScore=5.2005
+[Seed 42] Epoch 018 | TrainLoss=1.4683 | Train MAE=5.0414, AUC=0.9242 | Val MAE=5.0968, Val RMSE=6.5334, Val R2=0.1730, Val Acc=0.8395, Val AUC=0.9184653808176226, ValScore=5.1784
+[Seed 42] Epoch 019 | TrainLoss=1.4658 | Train MAE=5.0575, AUC=0.9246 | Val MAE=5.1243, Val RMSE=6.6217, Val R2=0.1505, Val Acc=0.8458, Val AUC=0.9189080491276755, ValScore=5.2054
+[Seed 42] Epoch 020 | TrainLoss=1.4693 | Train MAE=5.0327, AUC=0.9251 | Val MAE=5.0906, Val RMSE=6.4717, Val R2=0.1886, Val Acc=0.8410, Val AUC=0.9199331177018804, ValScore=5.1707
+[Seed 42] Epoch 021 | TrainLoss=1.4600 | Train MAE=5.0497, AUC=0.9260 | Val MAE=5.0952, Val RMSE=6.4114, Val R2=0.2036, Val Acc=0.8438, Val AUC=0.920407922786044, ValScore=5.1748
+[Seed 42] Epoch 022 | TrainLoss=1.4707 | Train MAE=5.0338, AUC=0.9254 | Val MAE=5.1024, Val RMSE=6.5588, Val R2=0.1666, Val Acc=0.8454, Val AUC=0.9204720388010589, ValScore=5.1819
+[Seed 42] Epoch 023 | TrainLoss=1.4660 | Train MAE=5.2372, AUC=0.9264 | Val MAE=5.2697, Val RMSE=6.4482, Val R2=0.1944, Val Acc=0.8446, Val AUC=0.9209236865038781, ValScore=5.3488
+[Seed 42] Epoch 024 | TrainLoss=1.4697 | Train MAE=5.0393, AUC=0.9256 | Val MAE=5.1024, Val RMSE=6.4554, Val R2=0.1927, Val Acc=0.8438, Val AUC=0.9201966707562288, ValScore=5.1822
+[Seed 42] Epoch 025 | TrainLoss=1.4576 | Train MAE=5.0445, AUC=0.9262 | Val MAE=5.1073, Val RMSE=6.5860, Val R2=0.1596, Val Acc=0.8432, Val AUC=0.9211628219112307, ValScore=5.1861
+[Seed 42] Epoch 026 | TrainLoss=1.4589 | Train MAE=5.1936, AUC=0.9277 | Val MAE=5.2359, Val RMSE=6.4255, Val R2=0.2001, Val Acc=0.8446, Val AUC=0.9223936288530259, ValScore=5.3135
+[Seed 42] Epoch 027 | TrainLoss=1.4489 | Train MAE=5.0574, AUC=0.9277 | Val MAE=5.1303, Val RMSE=6.7037, Val R2=0.1294, Val Acc=0.8452, Val AUC=0.9221415757227466, ValScore=5.2082
+[Seed 42] Epoch 028 | TrainLoss=1.4524 | Train MAE=5.0558, AUC=0.9282 | Val MAE=5.1333, Val RMSE=6.6766, Val R2=0.1364, Val Acc=0.8444, Val AUC=0.9228235369733586, ValScore=5.2104
+[Seed 42] Epoch 029 | TrainLoss=1.4528 | Train MAE=5.0210, AUC=0.9284 | Val MAE=5.0823, Val RMSE=6.4221, Val R2=0.2010, Val Acc=0.8452, Val AUC=0.9229867413752145, ValScore=5.1594
+[Seed 42] Epoch 030 | TrainLoss=1.4482 | Train MAE=5.0282, AUC=0.9284 | Val MAE=5.1020, Val RMSE=6.4276, Val R2=0.1996, Val Acc=0.8446, Val AUC=0.9222145135973212, ValScore=5.1798
+[Seed 42] Epoch 031 | TrainLoss=1.4560 | Train MAE=5.0148, AUC=0.9288 | Val MAE=5.0779, Val RMSE=6.4559, Val R2=0.1925, Val Acc=0.8448, Val AUC=0.9228331464989503, ValScore=5.1551
+[Seed 42] Epoch 032 | TrainLoss=1.4476 | Train MAE=5.0159, AUC=0.9274 | Val MAE=5.0997, Val RMSE=6.5345, Val R2=0.1727, Val Acc=0.8448, Val AUC=0.9220751754762385, ValScore=5.1777
+[Seed 42] Epoch 033 | TrainLoss=1.4509 | Train MAE=5.1537, AUC=0.9291 | Val MAE=5.2351, Val RMSE=6.8634, Val R2=0.0874, Val Acc=0.8488, Val AUC=0.9238301741624118, ValScore=5.3113
+[Seed 42] Epoch 034 | TrainLoss=1.4396 | Train MAE=5.0262, AUC=0.9292 | Val MAE=5.1121, Val RMSE=6.6040, Val R2=0.1551, Val Acc=0.8460, Val AUC=0.9236331001211746, ValScore=5.1884
+[Seed 42] Epoch 035 | TrainLoss=1.4448 | Train MAE=5.0179, AUC=0.9303 | Val MAE=5.0832, Val RMSE=6.4403, Val R2=0.1964, Val Acc=0.8492, Val AUC=0.9248847014462179, ValScore=5.1583
+[Seed 42] Epoch 036 | TrainLoss=1.4387 | Train MAE=4.9966, AUC=0.9296 | Val MAE=5.0789, Val RMSE=6.5123, Val R2=0.1783, Val Acc=0.8492, Val AUC=0.9245760938948321, ValScore=5.1544
+[Seed 42] Epoch 037 | TrainLoss=1.4412 | Train MAE=5.1064, AUC=0.9302 | Val MAE=5.2062, Val RMSE=6.7664, Val R2=0.1130, Val Acc=0.8468, Val AUC=0.925004269149894, ValScore=5.2812
+[Seed 42] Epoch 038 | TrainLoss=1.4353 | Train MAE=5.0033, AUC=0.9303 | Val MAE=5.1010, Val RMSE=6.5655, Val R2=0.1649, Val Acc=0.8478, Val AUC=0.9247262230405546, ValScore=5.1762
+[Seed 42] Epoch 039 | TrainLoss=1.4266 | Train MAE=5.0781, AUC=0.9302 | Val MAE=5.1635, Val RMSE=6.4012, Val R2=0.2062, Val Acc=0.8482, Val AUC=0.9240494603857548, ValScore=5.2394
+[Seed 42] Epoch 040 | TrainLoss=1.4346 | Train MAE=5.0057, AUC=0.9307 | Val MAE=5.0994, Val RMSE=6.5490, Val R2=0.1691, Val Acc=0.8496, Val AUC=0.9251870076693467, ValScore=5.1742
+[Seed 42] Epoch 041 | TrainLoss=1.4440 | Train MAE=5.1845, AUC=0.9308 | Val MAE=5.2478, Val RMSE=6.4249, Val R2=0.2003, Val Acc=0.8432, Val AUC=0.9259445848590424, ValScore=5.3218
+[Seed 42] Epoch 042 | TrainLoss=1.4370 | Train MAE=5.0169, AUC=0.9307 | Val MAE=5.1142, Val RMSE=6.5140, Val R2=0.1779, Val Acc=0.8397, Val AUC=0.9257695654667047, ValScore=5.1884
+[Seed 42] Epoch 043 | TrainLoss=1.4303 | Train MAE=5.0029, AUC=0.9309 | Val MAE=5.0953, Val RMSE=6.4060, Val R2=0.2049, Val Acc=0.8454, Val AUC=0.9256166007232665, ValScore=5.1697
+[Seed 42] Epoch 044 | TrainLoss=1.4273 | Train MAE=5.0690, AUC=0.9313 | Val MAE=5.1639, Val RMSE=6.7342, Val R2=0.1214, Val Acc=0.8462, Val AUC=0.9254444169286443, ValScore=5.2385
+[Seed 42] Epoch 045 | TrainLoss=1.4299 | Train MAE=4.9901, AUC=0.9301 | Val MAE=5.0825, Val RMSE=6.5449, Val R2=0.1701, Val Acc=0.8452, Val AUC=0.9251584941589838, ValScore=5.1574
+[Seed 42] Epoch 046 | TrainLoss=1.4303 | Train MAE=5.0266, AUC=0.9301 | Val MAE=5.1225, Val RMSE=6.6524, Val R2=0.1426, Val Acc=0.8531, Val AUC=0.9250997342729874, ValScore=5.1974
+[Seed 42] Epoch 047 | TrainLoss=1.4303 | Train MAE=5.0018, AUC=0.9311 | Val MAE=5.1093, Val RMSE=6.4817, Val R2=0.1861, Val Acc=0.8454, Val AUC=0.925264671540114, ValScore=5.1840
+[Seed 42] Epoch 048 | TrainLoss=1.4227 | Train MAE=4.9877, AUC=0.9315 | Val MAE=5.0804, Val RMSE=6.4516, Val R2=0.1936, Val Acc=0.8500, Val AUC=0.9257550724117137, ValScore=5.1547
+[Seed 42] Epoch 049 | TrainLoss=1.4229 | Train MAE=5.0077, AUC=0.9316 | Val MAE=5.1045, Val RMSE=6.6139, Val R2=0.1525, Val Acc=0.8518, Val AUC=0.9263760683114393, ValScore=5.1782
+[Seed 42] Epoch 050 | TrainLoss=1.4375 | Train MAE=5.0025, AUC=0.9311 | Val MAE=5.1069, Val RMSE=6.5951, Val R2=0.1573, Val Acc=0.8502, Val AUC=0.9254335471374011, ValScore=5.1814
+[Seed 42] Epoch 051 | TrainLoss=1.4337 | Train MAE=4.9783, AUC=0.9318 | Val MAE=5.0875, Val RMSE=6.4625, Val R2=0.1909, Val Acc=0.8500, Val AUC=0.9257520792807914, ValScore=5.1618
+[Seed 42] Epoch 052 | TrainLoss=1.4300 | Train MAE=4.9787, AUC=0.9311 | Val MAE=5.0889, Val RMSE=6.4486, Val R2=0.1944, Val Acc=0.8488, Val AUC=0.9258302157511782, ValScore=5.1630
+[Seed 42] Epoch 053 | TrainLoss=1.4242 | Train MAE=4.9724, AUC=0.9325 | Val MAE=5.0903, Val RMSE=6.4479, Val R2=0.1945, Val Acc=0.8520, Val AUC=0.9262154632074895, ValScore=5.1641
+[Seed 42] Epoch 054 | TrainLoss=1.4267 | Train MAE=5.0079, AUC=0.9306 | Val MAE=5.1195, Val RMSE=6.6268, Val R2=0.1492, Val Acc=0.8450, Val AUC=0.9235845798935958, ValScore=5.1959
+[Seed 42] Epoch 055 | TrainLoss=1.4184 | Train MAE=4.9984, AUC=0.9322 | Val MAE=5.1152, Val RMSE=6.4628, Val R2=0.1908, Val Acc=0.8468, Val AUC=0.9255715462262291, ValScore=5.1896
+[Seed 42] Epoch 056 | TrainLoss=1.4211 | Train MAE=4.9735, AUC=0.9316 | Val MAE=5.0781, Val RMSE=6.4569, Val R2=0.1923, Val Acc=0.8486, Val AUC=0.9259932626198277, ValScore=5.1521
+[Seed 42] Epoch 057 | TrainLoss=1.4292 | Train MAE=4.9740, AUC=0.9321 | Val MAE=5.0927, Val RMSE=6.5639, Val R2=0.1653, Val Acc=0.8504, Val AUC=0.9256065973646586, ValScore=5.1671
+[Seed 42] Epoch 058 | TrainLoss=1.4184 | Train MAE=4.9805, AUC=0.9321 | Val MAE=5.1002, Val RMSE=6.4432, Val R2=0.1957, Val Acc=0.8508, Val AUC=0.9251423470053253, ValScore=5.1751
+[Seed 42] Epoch 059 | TrainLoss=1.4143 | Train MAE=5.0089, AUC=0.9315 | Val MAE=5.1212, Val RMSE=6.4111, Val R2=0.2037, Val Acc=0.8512, Val AUC=0.9252508086179485, ValScore=5.1960
+[Seed 42] Epoch 060 | TrainLoss=1.4131 | Train MAE=5.2000, AUC=0.9326 | Val MAE=5.3246, Val RMSE=7.0289, Val R2=0.0428, Val Acc=0.8486, Val AUC=0.9260639950295123, ValScore=5.3985
+[Seed 42] Epoch 061 | TrainLoss=1.4191 | Train MAE=4.9674, AUC=0.9322 | Val MAE=5.0824, Val RMSE=6.5164, Val R2=0.1773, Val Acc=0.8494, Val AUC=0.9263499965657762, ValScore=5.1560
+[Seed 42] Epoch 062 | TrainLoss=1.4159 | Train MAE=5.0445, AUC=0.9324 | Val MAE=5.1846, Val RMSE=6.7533, Val R2=0.1164, Val Acc=0.8496, Val AUC=0.9252601030771277, ValScore=5.2594
+[Seed 42] Epoch 063 | TrainLoss=1.4127 | Train MAE=4.9599, AUC=0.9320 | Val MAE=5.0835, Val RMSE=6.4482, Val R2=0.1945, Val Acc=0.8494, Val AUC=0.925525861596366, ValScore=5.1580
+[Seed 42] Epoch 064 | TrainLoss=1.4195 | Train MAE=5.0649, AUC=0.9333 | Val MAE=5.1948, Val RMSE=6.7760, Val R2=0.1105, Val Acc=0.8543, Val AUC=0.92651879339646, ValScore=5.2683
+[Seed 42] Epoch 065 | TrainLoss=1.4133 | Train MAE=4.9714, AUC=0.9329 | Val MAE=5.1025, Val RMSE=6.4506, Val R2=0.1938, Val Acc=0.8527, Val AUC=0.9266352892026111, ValScore=5.1759
+[Seed 42] Epoch 066 | TrainLoss=1.4091 | Train MAE=5.1644, AUC=0.9333 | Val MAE=5.3010, Val RMSE=6.9781, Val R2=0.0566, Val Acc=0.8543, Val AUC=0.9258840133411722, ValScore=5.3751
+[Seed 42] Epoch 067 | TrainLoss=1.4166 | Train MAE=5.0036, AUC=0.9326 | Val MAE=5.1383, Val RMSE=6.6393, Val R2=0.1460, Val Acc=0.8490, Val AUC=0.9260702963577692, ValScore=5.2122
+[Seed 42] Epoch 068 | TrainLoss=1.4190 | Train MAE=4.9567, AUC=0.9330 | Val MAE=5.0776, Val RMSE=6.4411, Val R2=0.1962, Val Acc=0.8539, Val AUC=0.9260634436632897, ValScore=5.1515
+[Seed 42] Epoch 069 | TrainLoss=1.4173 | Train MAE=5.0008, AUC=0.9324 | Val MAE=5.1333, Val RMSE=6.4373, Val R2=0.1972, Val Acc=0.8516, Val AUC=0.9253776228491204, ValScore=5.2079
+[Seed 42] Epoch 070 | TrainLoss=1.4020 | Train MAE=5.1709, AUC=0.9334 | Val MAE=5.3104, Val RMSE=7.0039, Val R2=0.0496, Val Acc=0.8537, Val AUC=0.9265400603793273, ValScore=5.3839
+[Seed 42] Epoch 071 | TrainLoss=1.4093 | Train MAE=5.1101, AUC=0.9335 | Val MAE=5.2651, Val RMSE=6.9161, Val R2=0.0733, Val Acc=0.8514, Val AUC=0.9254614305149382, ValScore=5.3397
+[Seed 42] Epoch 072 | TrainLoss=1.4217 | Train MAE=5.0277, AUC=0.9335 | Val MAE=5.1635, Val RMSE=6.4034, Val R2=0.2056, Val Acc=0.8516, Val AUC=0.926243110285217, ValScore=5.2372
+[Seed 42] Epoch 073 | TrainLoss=1.4041 | Train MAE=5.0252, AUC=0.9335 | Val MAE=5.1677, Val RMSE=6.7186, Val R2=0.1255, Val Acc=0.8537, Val AUC=0.9260422554470258, ValScore=5.2416
+[Seed 42] Epoch 074 | TrainLoss=1.4015 | Train MAE=4.9335, AUC=0.9342 | Val MAE=5.0797, Val RMSE=6.4773, Val R2=0.1872, Val Acc=0.8531, Val AUC=0.9259390711968176, ValScore=5.1538
+[Seed 42] Epoch 075 | TrainLoss=1.3984 | Train MAE=4.9370, AUC=0.9340 | Val MAE=5.0968, Val RMSE=6.4960, Val R2=0.1825, Val Acc=0.8518, Val AUC=0.925264671540114, ValScore=5.1716
+[Seed 42] Epoch 076 | TrainLoss=1.4155 | Train MAE=4.9583, AUC=0.9324 | Val MAE=5.1170, Val RMSE=6.5946, Val R2=0.1575, Val Acc=0.8506, Val AUC=0.924350821409645, ValScore=5.1926
+[Seed 42] Epoch 077 | TrainLoss=1.4015 | Train MAE=4.9561, AUC=0.9337 | Val MAE=5.0968, Val RMSE=6.4918, Val R2=0.1835, Val Acc=0.8522, Val AUC=0.9263374726758653, ValScore=5.1704
+[Seed 42] Epoch 078 | TrainLoss=1.4005 | Train MAE=4.9414, AUC=0.9335 | Val MAE=5.1111, Val RMSE=6.5345, Val R2=0.1728, Val Acc=0.8500, Val AUC=0.9253968419003042, ValScore=5.1857
+[Seed 42] Epoch 079 | TrainLoss=1.4048 | Train MAE=4.9687, AUC=0.9342 | Val MAE=5.1388, Val RMSE=6.6787, Val R2=0.1358, Val Acc=0.8518, Val AUC=0.9261152720882035, ValScore=5.2127
+[Seed 42] Epoch 080 | TrainLoss=1.3932 | Train MAE=5.0137, AUC=0.9340 | Val MAE=5.1916, Val RMSE=6.7205, Val R2=0.1250, Val Acc=0.8531, Val AUC=0.9259193795460144, ValScore=5.2657
+[Seed 42] Epoch 081 | TrainLoss=1.4021 | Train MAE=4.9558, AUC=0.9344 | Val MAE=5.1121, Val RMSE=6.4168, Val R2=0.2023, Val Acc=0.8537, Val AUC=0.9259313520697028, ValScore=5.1861
+[Seed 42] Epoch 082 | TrainLoss=1.3995 | Train MAE=5.1133, AUC=0.9348 | Val MAE=5.2753, Val RMSE=6.9293, Val R2=0.0698, Val Acc=0.8514, Val AUC=0.9257946132465262, ValScore=5.3495
+[Seed 42] Epoch 083 | TrainLoss=1.3967 | Train MAE=4.9678, AUC=0.9346 | Val MAE=5.1401, Val RMSE=6.4309, Val R2=0.1988, Val Acc=0.8514, Val AUC=0.9262448431504877, ValScore=5.2139
+[Seed 42] Epoch 084 | TrainLoss=1.3953 | Train MAE=4.9492, AUC=0.9348 | Val MAE=5.1315, Val RMSE=6.6029, Val R2=0.1553, Val Acc=0.8553, Val AUC=0.9260339061870853, ValScore=5.2054
+[Seed 42] Epoch 085 | TrainLoss=1.3939 | Train MAE=4.9289, AUC=0.9340 | Val MAE=5.1037, Val RMSE=6.4298, Val R2=0.1991, Val Acc=0.8526, Val AUC=0.9245724706310843, ValScore=5.1791
+[Seed 42] Epoch 086 | TrainLoss=1.3932 | Train MAE=4.9427, AUC=0.9356 | Val MAE=5.1364, Val RMSE=6.4381, Val R2=0.1970, Val Acc=0.8539, Val AUC=0.9267800622193152, ValScore=5.2097
+[Seed 42] Epoch 087 | TrainLoss=1.3959 | Train MAE=5.0865, AUC=0.9341 | Val MAE=5.2648, Val RMSE=6.9144, Val R2=0.0738, Val Acc=0.8531, Val AUC=0.924454005659853, ValScore=5.3403
+[Seed 42] Epoch 088 | TrainLoss=1.3970 | Train MAE=4.9902, AUC=0.9352 | Val MAE=5.1719, Val RMSE=6.6998, Val R2=0.1304, Val Acc=0.8535, Val AUC=0.9257103329810891, ValScore=5.2462
+[Seed 42] Epoch 089 | TrainLoss=1.3944 | Train MAE=4.9140, AUC=0.9359 | Val MAE=5.1008, Val RMSE=6.4677, Val R2=0.1896, Val Acc=0.8535, Val AUC=0.9258929139673352, ValScore=5.1750
+[Seed 42] Epoch 090 | TrainLoss=1.3902 | Train MAE=4.9938, AUC=0.9353 | Val MAE=5.2008, Val RMSE=6.7440, Val R2=0.1189, Val Acc=0.8547, Val AUC=0.925433862203814, ValScore=5.2754
+[Seed 42] Epoch 091 | TrainLoss=1.3928 | Train MAE=5.0946, AUC=0.9359 | Val MAE=5.2706, Val RMSE=6.9284, Val R2=0.0700, Val Acc=0.8526, Val AUC=0.9258816503430758, ValScore=5.3447
+[Seed 42] Epoch 092 | TrainLoss=1.3837 | Train MAE=4.9369, AUC=0.9348 | Val MAE=5.1319, Val RMSE=6.5437, Val R2=0.1704, Val Acc=0.8551, Val AUC=0.925789729717127, ValScore=5.2061
+[Seed 42] Epoch 093 | TrainLoss=1.3835 | Train MAE=4.9218, AUC=0.9362 | Val MAE=5.1319, Val RMSE=6.5365, Val R2=0.1722, Val Acc=0.8545, Val AUC=0.9263152604937595, ValScore=5.2056
+[Seed 42] Early stopping at epoch 93
+
+[Seed 42] Best epoch based on validation: 68
+[Seed 42] Best validation metrics: {'age_mae': 5.077606678009033, 'age_rmse': np.float64(6.4411430050628375), 'age_r2': 0.1962122917175293, 'dm_acc': 0.8539392736654098, 'dm_auc': 0.9260634436632897}
+[Seed 42] Final fixed-test metrics: {'age_mae': 5.111638069152832, 'age_rmse': np.float64(6.493307336106371), 'age_r2': 0.2077721357345581, 'dm_acc': 0.8593827528034137, 'dm_auc': 0.9289520450776538}
+[Seed 42] Model saved to: ../saved_models/mtl_graphormer_ple_internal_seed42_20261009_145335.pt
+[Seed 42] Test predictions saved to: ../results/internal_5seeds/test_predictions_seed42_20261009_145335.csv
+
+==========================================================================================
+Running seed = 43
+Subtrain size: 35268
+Validation size: 5039
+Fixed test size: 10077
+==========================================================================================
+[Seed 43] Epoch 001 | TrainLoss=40.7028 | Train MAE=5.7811, AUC=0.7646 | Val MAE=5.8343, Val RMSE=7.2355, Val R2=-0.0039, Val Acc=0.6845, Val AUC=0.7674806722509038, ValScore=6.0668
+[Seed 43] Epoch 002 | TrainLoss=2.0056 | Train MAE=5.5471, AUC=0.7759 | Val MAE=5.6311, Val RMSE=7.2252, Val R2=-0.0010, Val Acc=0.7041, Val AUC=0.7787691867568765, ValScore=5.8523
+[Seed 43] Epoch 003 | TrainLoss=1.8349 | Train MAE=5.4746, AUC=0.9058 | Val MAE=5.5264, Val RMSE=6.9776, Val R2=0.0664, Val Acc=0.8236, Val AUC=0.900389233046434, ValScore=5.6260
+[Seed 43] Epoch 004 | TrainLoss=1.6905 | Train MAE=5.3938, AUC=0.9103 | Val MAE=5.4438, Val RMSE=6.9126, Val R2=0.0837, Val Acc=0.8248, Val AUC=0.9035934584651097, ValScore=5.5402
+[Seed 43] Epoch 005 | TrainLoss=1.6220 | Train MAE=5.2140, AUC=0.9118 | Val MAE=5.2381, Val RMSE=6.5204, Val R2=0.1848, Val Acc=0.8285, Val AUC=0.9057659989149112, ValScore=5.3324
+[Seed 43] Epoch 006 | TrainLoss=1.5918 | Train MAE=5.1624, AUC=0.9138 | Val MAE=5.1952, Val RMSE=6.5809, Val R2=0.1695, Val Acc=0.8315, Val AUC=0.90733944058068, ValScore=5.2879
+[Seed 43] Epoch 007 | TrainLoss=1.5774 | Train MAE=5.1478, AUC=0.9155 | Val MAE=5.1749, Val RMSE=6.5747, Val R2=0.1711, Val Acc=0.8329, Val AUC=0.908514480767401, ValScore=5.2664
+[Seed 43] Epoch 008 | TrainLoss=1.5617 | Train MAE=5.1115, AUC=0.9163 | Val MAE=5.1463, Val RMSE=6.6188, Val R2=0.1600, Val Acc=0.8329, Val AUC=0.9097007058117781, ValScore=5.2366
+[Seed 43] Epoch 009 | TrainLoss=1.5549 | Train MAE=5.1510, AUC=0.9168 | Val MAE=5.1788, Val RMSE=6.6998, Val R2=0.1393, Val Acc=0.8343, Val AUC=0.9099861559818194, ValScore=5.2688
+[Seed 43] Epoch 010 | TrainLoss=1.5425 | Train MAE=5.1478, AUC=0.9178 | Val MAE=5.1744, Val RMSE=6.7092, Val R2=0.1369, Val Acc=0.8325, Val AUC=0.9113278663009377, ValScore=5.2631
+[Seed 43] Epoch 011 | TrainLoss=1.5014 | Train MAE=5.2200, AUC=0.9186 | Val MAE=5.2556, Val RMSE=6.5183, Val R2=0.1853, Val Acc=0.8381, Val AUC=0.912423352218414, ValScore=5.3432
+[Seed 43] Epoch 012 | TrainLoss=1.5181 | Train MAE=5.0948, AUC=0.9187 | Val MAE=5.1176, Val RMSE=6.5836, Val R2=0.1689, Val Acc=0.8373, Val AUC=0.9132559152143682, ValScore=5.2043
+[Seed 43] Epoch 013 | TrainLoss=1.5076 | Train MAE=5.1112, AUC=0.9197 | Val MAE=5.1368, Val RMSE=6.7121, Val R2=0.1361, Val Acc=0.8377, Val AUC=0.9138506030686209, ValScore=5.2230
+[Seed 43] Epoch 014 | TrainLoss=1.5041 | Train MAE=5.1446, AUC=0.9205 | Val MAE=5.1716, Val RMSE=6.4145, Val R2=0.2110, Val Acc=0.8367, Val AUC=0.9145405985127605, ValScore=5.2571
+[Seed 43] Epoch 015 | TrainLoss=1.4929 | Train MAE=5.2015, AUC=0.9208 | Val MAE=5.2174, Val RMSE=6.8568, Val R2=0.0985, Val Acc=0.8323, Val AUC=0.9148228980186732, ValScore=5.3026
+[Seed 43] Epoch 016 | TrainLoss=1.4859 | Train MAE=5.0700, AUC=0.9214 | Val MAE=5.0973, Val RMSE=6.5562, Val R2=0.1758, Val Acc=0.8351, Val AUC=0.9156474268210997, ValScore=5.1816
+[Seed 43] Epoch 017 | TrainLoss=1.4714 | Train MAE=5.1135, AUC=0.9217 | Val MAE=5.1248, Val RMSE=6.6733, Val R2=0.1461, Val Acc=0.8398, Val AUC=0.9158782129685117, ValScore=5.2089
+[Seed 43] Epoch 018 | TrainLoss=1.4614 | Train MAE=5.0788, AUC=0.9223 | Val MAE=5.1041, Val RMSE=6.4371, Val R2=0.2055, Val Acc=0.8395, Val AUC=0.9163193059465004, ValScore=5.1878
+[Seed 43] Epoch 019 | TrainLoss=1.4524 | Train MAE=5.0649, AUC=0.9230 | Val MAE=5.0909, Val RMSE=6.4084, Val R2=0.2125, Val Acc=0.8402, Val AUC=0.9168361723967797, ValScore=5.1741
+[Seed 43] Epoch 020 | TrainLoss=1.4450 | Train MAE=5.0610, AUC=0.9229 | Val MAE=5.0912, Val RMSE=6.4082, Val R2=0.2126, Val Acc=0.8416, Val AUC=0.9165324483747929, ValScore=5.1746
+[Seed 43] Epoch 021 | TrainLoss=1.4393 | Train MAE=5.2352, AUC=0.9238 | Val MAE=5.2479, Val RMSE=6.4365, Val R2=0.2056, Val Acc=0.8404, Val AUC=0.9175852427933284, ValScore=5.3303
+[Seed 43] Epoch 022 | TrainLoss=1.4434 | Train MAE=5.0408, AUC=0.9242 | Val MAE=5.0672, Val RMSE=6.4431, Val R2=0.2040, Val Acc=0.8373, Val AUC=0.9175460170249287, ValScore=5.1496
+[Seed 43] Epoch 023 | TrainLoss=1.4426 | Train MAE=5.0703, AUC=0.9242 | Val MAE=5.1055, Val RMSE=6.3875, Val R2=0.2177, Val Acc=0.8408, Val AUC=0.9178213850697589, ValScore=5.1877
+[Seed 43] Epoch 024 | TrainLoss=1.4336 | Train MAE=5.1463, AUC=0.9251 | Val MAE=5.1509, Val RMSE=6.7064, Val R2=0.1376, Val Acc=0.8398, Val AUC=0.9185184695081876, ValScore=5.2324
+[Seed 43] Epoch 025 | TrainLoss=1.4407 | Train MAE=5.0343, AUC=0.9252 | Val MAE=5.0663, Val RMSE=6.4462, Val R2=0.2032, Val Acc=0.8311, Val AUC=0.918458134290127, ValScore=5.1479
+[Seed 43] Epoch 026 | TrainLoss=1.4316 | Train MAE=5.0448, AUC=0.9259 | Val MAE=5.0731, Val RMSE=6.4772, Val R2=0.1955, Val Acc=0.8387, Val AUC=0.9190447879508522, ValScore=5.1541
+[Seed 43] Epoch 027 | TrainLoss=1.4356 | Train MAE=5.2083, AUC=0.9254 | Val MAE=5.2380, Val RMSE=6.4211, Val R2=0.2094, Val Acc=0.8339, Val AUC=0.9188278647256056, ValScore=5.3192
+[Seed 43] Epoch 028 | TrainLoss=1.4224 | Train MAE=5.1349, AUC=0.9257 | Val MAE=5.1555, Val RMSE=6.7768, Val R2=0.1194, Val Acc=0.8383, Val AUC=0.9192146087473778, ValScore=5.2363
+[Seed 43] Epoch 029 | TrainLoss=1.4251 | Train MAE=5.0929, AUC=0.9264 | Val MAE=5.1179, Val RMSE=6.6628, Val R2=0.1488, Val Acc=0.8397, Val AUC=0.9193797035477108, ValScore=5.1985
+[Seed 43] Epoch 030 | TrainLoss=1.4319 | Train MAE=5.0446, AUC=0.9270 | Val MAE=5.0684, Val RMSE=6.4705, Val R2=0.1972, Val Acc=0.8373, Val AUC=0.9205509629374776, ValScore=5.1479
+[Seed 43] Epoch 031 | TrainLoss=1.4162 | Train MAE=5.0524, AUC=0.9265 | Val MAE=5.0701, Val RMSE=6.5571, Val R2=0.1756, Val Acc=0.8416, Val AUC=0.91973375942915, ValScore=5.1503
+[Seed 43] Epoch 032 | TrainLoss=1.4188 | Train MAE=5.1770, AUC=0.9273 | Val MAE=5.1885, Val RMSE=6.8426, Val R2=0.1022, Val Acc=0.8418, Val AUC=0.9206190172826529, ValScore=5.2678
+[Seed 43] Epoch 033 | TrainLoss=1.4091 | Train MAE=5.0193, AUC=0.9274 | Val MAE=5.0428, Val RMSE=6.3972, Val R2=0.2153, Val Acc=0.8426, Val AUC=0.9208461801663174, ValScore=5.1220
+[Seed 43] Epoch 034 | TrainLoss=1.4140 | Train MAE=5.1533, AUC=0.9282 | Val MAE=5.1793, Val RMSE=6.8273, Val R2=0.1062, Val Acc=0.8428, Val AUC=0.921012692765508, ValScore=5.2583
+[Seed 43] Epoch 035 | TrainLoss=1.4097 | Train MAE=5.0838, AUC=0.9287 | Val MAE=5.1188, Val RMSE=6.3784, Val R2=0.2199, Val Acc=0.8436, Val AUC=0.9219809706187968, ValScore=5.1969
+[Seed 43] Epoch 036 | TrainLoss=1.4111 | Train MAE=5.1074, AUC=0.9285 | Val MAE=5.1414, Val RMSE=6.3813, Val R2=0.2192, Val Acc=0.8414, Val AUC=0.9219764809224136, ValScore=5.2194
+[Seed 43] Epoch 037 | TrainLoss=1.4001 | Train MAE=5.0641, AUC=0.9285 | Val MAE=5.0943, Val RMSE=6.3621, Val R2=0.2239, Val Acc=0.8408, Val AUC=0.9220508365958461, ValScore=5.1722
+[Seed 43] Epoch 038 | TrainLoss=1.4059 | Train MAE=5.0163, AUC=0.9285 | Val MAE=5.0520, Val RMSE=6.4048, Val R2=0.2134, Val Acc=0.8402, Val AUC=0.9215386173751565, ValScore=5.1305
+[Seed 43] Epoch 039 | TrainLoss=1.4050 | Train MAE=5.0245, AUC=0.9287 | Val MAE=5.0525, Val RMSE=6.3898, Val R2=0.2171, Val Acc=0.8393, Val AUC=0.9223742522686356, ValScore=5.1301
+[Seed 43] Epoch 040 | TrainLoss=1.3972 | Train MAE=5.1745, AUC=0.9288 | Val MAE=5.2028, Val RMSE=6.8783, Val R2=0.0928, Val Acc=0.8442, Val AUC=0.9218232011125624, ValScore=5.2810
+[Seed 43] Epoch 041 | TrainLoss=1.4074 | Train MAE=5.0343, AUC=0.9296 | Val MAE=5.0592, Val RMSE=6.3811, Val R2=0.2192, Val Acc=0.8454, Val AUC=0.9225118575244475, ValScore=5.1367
+[Seed 43] Epoch 042 | TrainLoss=1.3982 | Train MAE=5.0639, AUC=0.9295 | Val MAE=5.0850, Val RMSE=6.6318, Val R2=0.1567, Val Acc=0.8448, Val AUC=0.9228942693830432, ValScore=5.1621
+[Seed 43] Epoch 043 | TrainLoss=1.3925 | Train MAE=5.0728, AUC=0.9298 | Val MAE=5.1030, Val RMSE=6.3453, Val R2=0.2280, Val Acc=0.8444, Val AUC=0.9228118795160832, ValScore=5.1802
+[Seed 43] Epoch 044 | TrainLoss=1.4059 | Train MAE=5.0100, AUC=0.9300 | Val MAE=5.0331, Val RMSE=6.3915, Val R2=0.2167, Val Acc=0.8432, Val AUC=0.9230540080543578, ValScore=5.1100
+[Seed 43] Epoch 045 | TrainLoss=1.3931 | Train MAE=5.0046, AUC=0.9303 | Val MAE=5.0273, Val RMSE=6.4056, Val R2=0.2132, Val Acc=0.8440, Val AUC=0.9231764113557496, ValScore=5.1041
+[Seed 43] Epoch 046 | TrainLoss=1.3924 | Train MAE=5.0093, AUC=0.9305 | Val MAE=5.0334, Val RMSE=6.4008, Val R2=0.2144, Val Acc=0.8454, Val AUC=0.9238515986784854, ValScore=5.1095
+[Seed 43] Epoch 047 | TrainLoss=1.3960 | Train MAE=5.0137, AUC=0.9300 | Val MAE=5.0300, Val RMSE=6.4935, Val R2=0.1915, Val Acc=0.8448, Val AUC=0.9229555498003426, ValScore=5.1070
+[Seed 43] Epoch 048 | TrainLoss=1.3927 | Train MAE=5.0099, AUC=0.9302 | Val MAE=5.0319, Val RMSE=6.4224, Val R2=0.2091, Val Acc=0.8474, Val AUC=0.9233208693060411, ValScore=5.1085
+[Seed 43] Epoch 049 | TrainLoss=1.3896 | Train MAE=5.0213, AUC=0.9304 | Val MAE=5.0596, Val RMSE=6.3526, Val R2=0.2262, Val Acc=0.8387, Val AUC=0.9229201048288969, ValScore=5.1367
+[Seed 43] Epoch 050 | TrainLoss=1.3970 | Train MAE=5.0516, AUC=0.9310 | Val MAE=5.0710, Val RMSE=6.5720, Val R2=0.1718, Val Acc=0.8462, Val AUC=0.9239562007275512, ValScore=5.1471
+[Seed 43] Epoch 051 | TrainLoss=1.3848 | Train MAE=5.0068, AUC=0.9302 | Val MAE=5.0374, Val RMSE=6.4676, Val R2=0.1979, Val Acc=0.8464, Val AUC=0.9232484040310855, ValScore=5.1142
+[Seed 43] Epoch 052 | TrainLoss=1.3851 | Train MAE=5.0816, AUC=0.9308 | Val MAE=5.0973, Val RMSE=6.6681, Val R2=0.1474, Val Acc=0.8464, Val AUC=0.9235034502922871, ValScore=5.1738
+[Seed 43] Epoch 053 | TrainLoss=1.3914 | Train MAE=4.9991, AUC=0.9309 | Val MAE=5.0248, Val RMSE=6.4334, Val R2=0.2064, Val Acc=0.8424, Val AUC=0.9232093357958925, ValScore=5.1016
+[Seed 43] Epoch 054 | TrainLoss=1.3824 | Train MAE=5.1332, AUC=0.9311 | Val MAE=5.1739, Val RMSE=6.3739, Val R2=0.2210, Val Acc=0.8460, Val AUC=0.9235781210321324, ValScore=5.2503
+[Seed 43] Epoch 055 | TrainLoss=1.3838 | Train MAE=5.0345, AUC=0.9308 | Val MAE=5.0609, Val RMSE=6.5937, Val R2=0.1663, Val Acc=0.8466, Val AUC=0.9234694231196995, ValScore=5.1374
+[Seed 43] Epoch 056 | TrainLoss=1.3830 | Train MAE=5.0352, AUC=0.9319 | Val MAE=5.0597, Val RMSE=6.5785, Val R2=0.1702, Val Acc=0.8514, Val AUC=0.925444259395438, ValScore=5.1342
+[Seed 43] Epoch 057 | TrainLoss=1.3806 | Train MAE=5.0395, AUC=0.9311 | Val MAE=5.0617, Val RMSE=6.5954, Val R2=0.1659, Val Acc=0.8440, Val AUC=0.9237997702535716, ValScore=5.1379
+[Seed 43] Epoch 058 | TrainLoss=1.3788 | Train MAE=5.0024, AUC=0.9320 | Val MAE=5.0300, Val RMSE=6.4167, Val R2=0.2105, Val Acc=0.8486, Val AUC=0.9245384434584967, ValScore=5.1055
+[Seed 43] Epoch 059 | TrainLoss=1.3806 | Train MAE=5.0061, AUC=0.9321 | Val MAE=5.0416, Val RMSE=6.5309, Val R2=0.1821, Val Acc=0.8466, Val AUC=0.924018741410502, ValScore=5.1176
+[Seed 43] Epoch 060 | TrainLoss=1.3773 | Train MAE=5.0099, AUC=0.9315 | Val MAE=5.0548, Val RMSE=6.3507, Val R2=0.2266, Val Acc=0.8355, Val AUC=0.9233600950744407, ValScore=5.1314
+[Seed 43] Epoch 061 | TrainLoss=1.3721 | Train MAE=4.9982, AUC=0.9319 | Val MAE=5.0417, Val RMSE=6.5505, Val R2=0.1772, Val Acc=0.8464, Val AUC=0.9241039668751775, ValScore=5.1176
+[Seed 43] Epoch 062 | TrainLoss=1.3805 | Train MAE=4.9886, AUC=0.9321 | Val MAE=5.0348, Val RMSE=6.3584, Val R2=0.2248, Val Acc=0.8442, Val AUC=0.9238805847884676, ValScore=5.1109
+[Seed 43] Epoch 063 | TrainLoss=1.3755 | Train MAE=5.1336, AUC=0.9323 | Val MAE=5.1648, Val RMSE=6.8233, Val R2=0.1073, Val Acc=0.8446, Val AUC=0.9236063194760825, ValScore=5.2412
+[Seed 43] Epoch 064 | TrainLoss=1.3706 | Train MAE=5.1084, AUC=0.9324 | Val MAE=5.1332, Val RMSE=6.7529, Val R2=0.1256, Val Acc=0.8450, Val AUC=0.924715668315724, ValScore=5.2085
+[Seed 43] Epoch 065 | TrainLoss=1.3760 | Train MAE=4.9761, AUC=0.9317 | Val MAE=5.0225, Val RMSE=6.3561, Val R2=0.2253, Val Acc=0.8460, Val AUC=0.9232510820955949, ValScore=5.0993
+[Seed 43] Epoch 066 | TrainLoss=1.3879 | Train MAE=5.0085, AUC=0.9322 | Val MAE=5.0611, Val RMSE=6.4364, Val R2=0.2056, Val Acc=0.8456, Val AUC=0.9241570555657427, ValScore=5.1369
+[Seed 43] Epoch 067 | TrainLoss=1.3693 | Train MAE=4.9801, AUC=0.9325 | Val MAE=5.0349, Val RMSE=6.4403, Val R2=0.2047, Val Acc=0.8448, Val AUC=0.9236140386031971, ValScore=5.1112
+[Seed 43] Epoch 068 | TrainLoss=1.3652 | Train MAE=5.0024, AUC=0.9323 | Val MAE=5.0559, Val RMSE=6.3321, Val R2=0.2312, Val Acc=0.8442, Val AUC=0.9236835107472305, ValScore=5.1322
+[Seed 43] Epoch 069 | TrainLoss=1.3659 | Train MAE=4.9725, AUC=0.9329 | Val MAE=5.0310, Val RMSE=6.5017, Val R2=0.1894, Val Acc=0.8432, Val AUC=0.9243248284305848, ValScore=5.1067
+[Seed 43] Epoch 070 | TrainLoss=1.3695 | Train MAE=4.9807, AUC=0.9330 | Val MAE=5.0332, Val RMSE=6.4036, Val R2=0.2137, Val Acc=0.8478, Val AUC=0.9246608467598885, ValScore=5.1085
+[Seed 43] Epoch 071 | TrainLoss=1.3678 | Train MAE=4.9567, AUC=0.9334 | Val MAE=5.0171, Val RMSE=6.3778, Val R2=0.2200, Val Acc=0.8454, Val AUC=0.9245105600809596, ValScore=5.0925
+[Seed 43] Epoch 072 | TrainLoss=1.3660 | Train MAE=4.9691, AUC=0.9331 | Val MAE=5.0275, Val RMSE=6.4217, Val R2=0.2093, Val Acc=0.8444, Val AUC=0.9243805951856591, ValScore=5.1032
+[Seed 43] Epoch 073 | TrainLoss=1.3604 | Train MAE=5.0269, AUC=0.9329 | Val MAE=5.0860, Val RMSE=6.6451, Val R2=0.1533, Val Acc=0.8460, Val AUC=0.9241674527573668, ValScore=5.1618
+[Seed 43] Epoch 074 | TrainLoss=1.3709 | Train MAE=5.0011, AUC=0.9336 | Val MAE=5.0700, Val RMSE=6.3471, Val R2=0.2275, Val Acc=0.8454, Val AUC=0.9239439131374502, ValScore=5.1460
+[Seed 43] Epoch 075 | TrainLoss=1.3729 | Train MAE=4.9866, AUC=0.9332 | Val MAE=5.0508, Val RMSE=6.5381, Val R2=0.1803, Val Acc=0.8472, Val AUC=0.9241301173874441, ValScore=5.1266
+[Seed 43] Epoch 076 | TrainLoss=1.3615 | Train MAE=5.0152, AUC=0.9334 | Val MAE=5.0725, Val RMSE=6.6151, Val R2=0.1609, Val Acc=0.8446, Val AUC=0.9236748464208772, ValScore=5.1488
+[Seed 43] Epoch 077 | TrainLoss=1.3614 | Train MAE=4.9570, AUC=0.9336 | Val MAE=5.0291, Val RMSE=6.3805, Val R2=0.2194, Val Acc=0.8452, Val AUC=0.9245690049005431, ValScore=5.1045
+[Seed 43] Epoch 078 | TrainLoss=1.3635 | Train MAE=5.0129, AUC=0.9335 | Val MAE=5.0858, Val RMSE=6.3355, Val R2=0.2303, Val Acc=0.8444, Val AUC=0.9237619622840298, ValScore=5.1620
+[Seed 43] Epoch 079 | TrainLoss=1.3652 | Train MAE=5.0194, AUC=0.9341 | Val MAE=5.0939, Val RMSE=6.6364, Val R2=0.1555, Val Acc=0.8462, Val AUC=0.9244317934777471, ValScore=5.1694
+[Seed 43] Epoch 080 | TrainLoss=1.3594 | Train MAE=4.9588, AUC=0.9340 | Val MAE=5.0305, Val RMSE=6.4855, Val R2=0.1935, Val Acc=0.8458, Val AUC=0.9238925573121558, ValScore=5.1066
+[Seed 43] Epoch 081 | TrainLoss=1.3499 | Train MAE=4.9467, AUC=0.9340 | Val MAE=5.0201, Val RMSE=6.3809, Val R2=0.2193, Val Acc=0.8458, Val AUC=0.9236047441440182, ValScore=5.0965
+[Seed 43] Epoch 082 | TrainLoss=1.3558 | Train MAE=5.0078, AUC=0.9337 | Val MAE=5.0999, Val RMSE=6.3560, Val R2=0.2254, Val Acc=0.8456, Val AUC=0.9236178194001514, ValScore=5.1763
+[Seed 43] Epoch 083 | TrainLoss=1.3594 | Train MAE=5.0011, AUC=0.9343 | Val MAE=5.0891, Val RMSE=6.3565, Val R2=0.2252, Val Acc=0.8450, Val AUC=0.9246717165511318, ValScore=5.1644
+[Seed 43] Epoch 084 | TrainLoss=1.3659 | Train MAE=5.1058, AUC=0.9343 | Val MAE=5.1695, Val RMSE=6.8085, Val R2=0.1111, Val Acc=0.8434, Val AUC=0.9243189997019472, ValScore=5.2452
+[Seed 43] Epoch 085 | TrainLoss=1.3527 | Train MAE=4.9461, AUC=0.9329 | Val MAE=5.0241, Val RMSE=6.4706, Val R2=0.1972, Val Acc=0.8438, Val AUC=0.9222669721550606, ValScore=5.1019
+[Seed 43] Epoch 086 | TrainLoss=1.3632 | Train MAE=4.9424, AUC=0.9337 | Val MAE=5.0301, Val RMSE=6.3729, Val R2=0.2212, Val Acc=0.8450, Val AUC=0.9233983756436019, ValScore=5.1067
+[Seed 43] Epoch 087 | TrainLoss=1.3469 | Train MAE=4.9543, AUC=0.9340 | Val MAE=5.0466, Val RMSE=6.5073, Val R2=0.1880, Val Acc=0.8484, Val AUC=0.9234216905581527, ValScore=5.1232
+[Seed 43] Epoch 088 | TrainLoss=1.3472 | Train MAE=5.0192, AUC=0.9337 | Val MAE=5.1010, Val RMSE=6.6768, Val R2=0.1452, Val Acc=0.8438, Val AUC=0.9233183487747382, ValScore=5.1776
+[Seed 43] Epoch 089 | TrainLoss=1.3478 | Train MAE=4.9316, AUC=0.9346 | Val MAE=5.0398, Val RMSE=6.4294, Val R2=0.2073, Val Acc=0.8450, Val AUC=0.9232244589837091, ValScore=5.1165
+[Seed 43] Epoch 090 | TrainLoss=1.3488 | Train MAE=4.9708, AUC=0.9351 | Val MAE=5.0733, Val RMSE=6.3625, Val R2=0.2238, Val Acc=0.8450, Val AUC=0.9231817674847681, ValScore=5.1501
+[Seed 43] Epoch 091 | TrainLoss=1.3446 | Train MAE=5.0147, AUC=0.9349 | Val MAE=5.1267, Val RMSE=6.3643, Val R2=0.2233, Val Acc=0.8468, Val AUC=0.9234544574650889, ValScore=5.2033
+[Seed 43] Epoch 092 | TrainLoss=1.3455 | Train MAE=4.9317, AUC=0.9348 | Val MAE=5.0445, Val RMSE=6.4304, Val R2=0.2071, Val Acc=0.8444, Val AUC=0.923485964106374, ValScore=5.1210
+[Seed 43] Epoch 093 | TrainLoss=1.3482 | Train MAE=4.9423, AUC=0.9355 | Val MAE=5.0536, Val RMSE=6.5179, Val R2=0.1854, Val Acc=0.8478, Val AUC=0.924028035869681, ValScore=5.1296
+[Seed 43] Epoch 094 | TrainLoss=1.3490 | Train MAE=4.9258, AUC=0.9354 | Val MAE=5.0446, Val RMSE=6.4282, Val R2=0.2076, Val Acc=0.8412, Val AUC=0.9233821497233403, ValScore=5.1212
+[Seed 43] Epoch 095 | TrainLoss=1.3453 | Train MAE=4.9275, AUC=0.9347 | Val MAE=5.0541, Val RMSE=6.3700, Val R2=0.2219, Val Acc=0.8371, Val AUC=0.922967679857237, ValScore=5.1311
+[Seed 43] Epoch 096 | TrainLoss=1.3421 | Train MAE=4.9169, AUC=0.9357 | Val MAE=5.0480, Val RMSE=6.5117, Val R2=0.1869, Val Acc=0.8414, Val AUC=0.9238917696461236, ValScore=5.1241
+[Seed 43] Early stopping at epoch 96
+
+[Seed 43] Best epoch based on validation: 71
+[Seed 43] Best validation metrics: {'age_mae': 5.017058372497559, 'age_rmse': np.float64(6.377795036785833), 'age_r2': 0.22002995014190674, 'dm_acc': 0.8454058344909704, 'dm_auc': 0.9245105600809596}
+[Seed 43] Final fixed-test metrics: {'age_mae': 5.091354846954346, 'age_rmse': np.float64(6.488685443742962), 'age_r2': 0.20889955759048462, 'dm_acc': 0.8625583010816711, 'dm_auc': 0.928547509202162}
+[Seed 43] Model saved to: ../saved_models/mtl_graphormer_ple_internal_seed43_20261009_145335.pt
+[Seed 43] Test predictions saved to: ../results/internal_5seeds/test_predictions_seed43_20261009_145335.csv
+
+==========================================================================================
+Running seed = 44
+Subtrain size: 35268
+Validation size: 5039
+Fixed test size: 10077
+==========================================================================================
+[Seed 44] Epoch 001 | TrainLoss=40.5127 | Train MAE=5.8146, AUC=0.7652 | Val MAE=5.7919, Val RMSE=7.1604, Val R2=0.0043, Val Acc=0.6966, Val AUC=0.7640310100966182, ValScore=6.0279
+[Seed 44] Epoch 002 | TrainLoss=2.0010 | Train MAE=5.5803, AUC=0.8112 | Val MAE=5.5716, Val RMSE=7.2402, Val R2=-0.0180, Val Acc=0.7343, Val AUC=0.8089334875898491, ValScore=5.7626
+[Seed 44] Epoch 003 | TrainLoss=1.7842 | Train MAE=5.7239, AUC=0.9074 | Val MAE=5.7181, Val RMSE=7.6324, Val R2=-0.1313, Val Acc=0.8323, Val AUC=0.9102840512751683, ValScore=5.8078
+[Seed 44] Epoch 004 | TrainLoss=1.7166 | Train MAE=5.4570, AUC=0.9093 | Val MAE=5.4534, Val RMSE=7.1019, Val R2=0.0205, Val Acc=0.8395, Val AUC=0.9133502776050164, ValScore=5.5401
+[Seed 44] Epoch 005 | TrainLoss=1.6690 | Train MAE=5.3860, AUC=0.9125 | Val MAE=5.3837, Val RMSE=6.9500, Val R2=0.0619, Val Acc=0.8464, Val AUC=0.9159372879209209, ValScore=5.4677
+[Seed 44] Epoch 006 | TrainLoss=1.6106 | Train MAE=5.3522, AUC=0.9153 | Val MAE=5.3508, Val RMSE=6.9157, Val R2=0.0712, Val Acc=0.8468, Val AUC=0.9181741019189434, ValScore=5.4326
+[Seed 44] Epoch 007 | TrainLoss=1.5662 | Train MAE=5.1213, AUC=0.9158 | Val MAE=5.1662, Val RMSE=6.6264, Val R2=0.1473, Val Acc=0.8448, Val AUC=0.918214745486201, ValScore=5.2480
+[Seed 44] Epoch 008 | TrainLoss=1.4916 | Train MAE=5.1685, AUC=0.9176 | Val MAE=5.1906, Val RMSE=6.7824, Val R2=0.1067, Val Acc=0.8508, Val AUC=0.9201406677013447, ValScore=5.2705
+[Seed 44] Epoch 009 | TrainLoss=1.4931 | Train MAE=5.1350, AUC=0.9188 | Val MAE=5.1573, Val RMSE=6.7399, Val R2=0.1178, Val Acc=0.8533, Val AUC=0.9203718476817729, ValScore=5.2370
+[Seed 44] Epoch 010 | TrainLoss=1.4633 | Train MAE=5.0707, AUC=0.9197 | Val MAE=5.0790, Val RMSE=6.5535, Val R2=0.1659, Val Acc=0.8478, Val AUC=0.921185979292575, ValScore=5.1578
+[Seed 44] Epoch 011 | TrainLoss=1.4629 | Train MAE=5.0787, AUC=0.9203 | Val MAE=5.0948, Val RMSE=6.5822, Val R2=0.1586, Val Acc=0.8518, Val AUC=0.9226157506740846, ValScore=5.1722
+[Seed 44] Epoch 012 | TrainLoss=1.4575 | Train MAE=5.0632, AUC=0.9210 | Val MAE=5.0594, Val RMSE=6.4521, Val R2=0.1915, Val Acc=0.8520, Val AUC=0.9229594881305031, ValScore=5.1365
+[Seed 44] Epoch 013 | TrainLoss=1.4549 | Train MAE=5.0469, AUC=0.9216 | Val MAE=5.0514, Val RMSE=6.4524, Val R2=0.1915, Val Acc=0.8541, Val AUC=0.923205082399319, ValScore=5.1282
+[Seed 44] Epoch 014 | TrainLoss=1.4504 | Train MAE=5.0666, AUC=0.9219 | Val MAE=5.0777, Val RMSE=6.5299, Val R2=0.1719, Val Acc=0.8500, Val AUC=0.9233531636133581, ValScore=5.1543
+[Seed 44] Epoch 015 | TrainLoss=1.4592 | Train MAE=5.0700, AUC=0.9219 | Val MAE=5.0790, Val RMSE=6.4340, Val R2=0.1961, Val Acc=0.8474, Val AUC=0.9229810701797831, ValScore=5.1560
+[Seed 44] Epoch 016 | TrainLoss=1.4451 | Train MAE=5.1619, AUC=0.9225 | Val MAE=5.1731, Val RMSE=6.8071, Val R2=0.1001, Val Acc=0.8472, Val AUC=0.9240111798165935, ValScore=5.2491
+[Seed 44] Epoch 017 | TrainLoss=1.4459 | Train MAE=5.0461, AUC=0.9226 | Val MAE=5.0551, Val RMSE=6.4434, Val R2=0.1937, Val Acc=0.8529, Val AUC=0.9238246605001869, ValScore=5.1312
+[Seed 44] Epoch 018 | TrainLoss=1.4371 | Train MAE=5.0638, AUC=0.9237 | Val MAE=5.0714, Val RMSE=6.5158, Val R2=0.1755, Val Acc=0.8533, Val AUC=0.9252309594339391, ValScore=5.1461
+[Seed 44] Epoch 019 | TrainLoss=1.4377 | Train MAE=5.0417, AUC=0.9238 | Val MAE=5.0492, Val RMSE=6.4572, Val R2=0.1903, Val Acc=0.8518, Val AUC=0.9255227109322375, ValScore=5.1237
+[Seed 44] Epoch 020 | TrainLoss=1.4306 | Train MAE=5.2688, AUC=0.9235 | Val MAE=5.2882, Val RMSE=7.0200, Val R2=0.0430, Val Acc=0.8494, Val AUC=0.9248902151084428, ValScore=5.3633
+[Seed 44] Epoch 021 | TrainLoss=1.4352 | Train MAE=5.0857, AUC=0.9242 | Val MAE=5.0961, Val RMSE=6.4045, Val R2=0.2034, Val Acc=0.8508, Val AUC=0.9252333224320355, ValScore=5.1709
+[Seed 44] Epoch 022 | TrainLoss=1.4342 | Train MAE=5.0842, AUC=0.9252 | Val MAE=5.0900, Val RMSE=6.6105, Val R2=0.1514, Val Acc=0.8514, Val AUC=0.9270366050459775, ValScore=5.1630
+[Seed 44] Epoch 023 | TrainLoss=1.4304 | Train MAE=5.0244, AUC=0.9254 | Val MAE=5.0372, Val RMSE=6.4527, Val R2=0.1914, Val Acc=0.8506, Val AUC=0.9264931154838129, ValScore=5.1107
+[Seed 44] Epoch 024 | TrainLoss=1.4339 | Train MAE=5.0267, AUC=0.9258 | Val MAE=5.0357, Val RMSE=6.4827, Val R2=0.1839, Val Acc=0.8518, Val AUC=0.9271358509660251, ValScore=5.1086
+[Seed 44] Epoch 025 | TrainLoss=1.4285 | Train MAE=5.1397, AUC=0.9259 | Val MAE=5.1611, Val RMSE=6.8014, Val R2=0.1016, Val Acc=0.8537, Val AUC=0.9269701260328664, ValScore=5.2341
+[Seed 44] Epoch 026 | TrainLoss=1.4269 | Train MAE=5.0243, AUC=0.9259 | Val MAE=5.0363, Val RMSE=6.4530, Val R2=0.1913, Val Acc=0.8526, Val AUC=0.927276055519743, ValScore=5.1091
+[Seed 44] Epoch 027 | TrainLoss=1.4280 | Train MAE=5.0227, AUC=0.9267 | Val MAE=5.0417, Val RMSE=6.5207, Val R2=0.1743, Val Acc=0.8529, Val AUC=0.9279153252714141, ValScore=5.1138
+[Seed 44] Epoch 028 | TrainLoss=1.4306 | Train MAE=5.0373, AUC=0.9270 | Val MAE=5.0522, Val RMSE=6.5115, Val R2=0.1766, Val Acc=0.8537, Val AUC=0.9281265773012294, ValScore=5.1241
+[Seed 44] Epoch 029 | TrainLoss=1.4143 | Train MAE=5.0383, AUC=0.9267 | Val MAE=5.0489, Val RMSE=6.3892, Val R2=0.2072, Val Acc=0.8535, Val AUC=0.9283882399571006, ValScore=5.1205
+[Seed 44] Epoch 030 | TrainLoss=1.4129 | Train MAE=5.0216, AUC=0.9280 | Val MAE=5.0324, Val RMSE=6.5528, Val R2=0.1661, Val Acc=0.8541, Val AUC=0.9287220528215143, ValScore=5.1037
+[Seed 44] Epoch 031 | TrainLoss=1.4135 | Train MAE=5.0724, AUC=0.9277 | Val MAE=5.0871, Val RMSE=6.3908, Val R2=0.2068, Val Acc=0.8569, Val AUC=0.9286106768445719, ValScore=5.1585
+[Seed 44] Epoch 032 | TrainLoss=1.4184 | Train MAE=5.0109, AUC=0.9259 | Val MAE=5.0275, Val RMSE=6.4632, Val R2=0.1887, Val Acc=0.8504, Val AUC=0.927430753128452, ValScore=5.1001
+[Seed 44] Epoch 033 | TrainLoss=1.4165 | Train MAE=5.0252, AUC=0.9283 | Val MAE=5.0350, Val RMSE=6.4874, Val R2=0.1827, Val Acc=0.8543, Val AUC=0.9295539856846424, ValScore=5.1055
+[Seed 44] Epoch 034 | TrainLoss=1.4136 | Train MAE=5.0252, AUC=0.9284 | Val MAE=5.0457, Val RMSE=6.5683, Val R2=0.1622, Val Acc=0.8587, Val AUC=0.93018679657485, ValScore=5.1155
+[Seed 44] Epoch 035 | TrainLoss=1.4157 | Train MAE=5.0204, AUC=0.9290 | Val MAE=5.0286, Val RMSE=6.4133, Val R2=0.2012, Val Acc=0.8571, Val AUC=0.930002797789746, ValScore=5.0986
+[Seed 44] Epoch 036 | TrainLoss=1.4065 | Train MAE=5.0077, AUC=0.9290 | Val MAE=5.0229, Val RMSE=6.5169, Val R2=0.1752, Val Acc=0.8587, Val AUC=0.9306995671617619, ValScore=5.0922
+[Seed 44] Epoch 037 | TrainLoss=1.4098 | Train MAE=5.1720, AUC=0.9290 | Val MAE=5.1864, Val RMSE=6.8341, Val R2=0.0930, Val Acc=0.8541, Val AUC=0.9308343368198582, ValScore=5.2556
+[Seed 44] Epoch 038 | TrainLoss=1.4093 | Train MAE=5.0136, AUC=0.9293 | Val MAE=5.0330, Val RMSE=6.4321, Val R2=0.1965, Val Acc=0.8593, Val AUC=0.9312958303480791, ValScore=5.1017
+[Seed 44] Epoch 039 | TrainLoss=1.4054 | Train MAE=5.0006, AUC=0.9293 | Val MAE=5.0153, Val RMSE=6.4902, Val R2=0.1820, Val Acc=0.8543, Val AUC=0.9305332120957777, ValScore=5.0848
+[Seed 44] Epoch 040 | TrainLoss=1.4081 | Train MAE=5.0031, AUC=0.9289 | Val MAE=5.0271, Val RMSE=6.4667, Val R2=0.1879, Val Acc=0.8603, Val AUC=0.9309265725122199, ValScore=5.0962
+[Seed 44] Epoch 041 | TrainLoss=1.4099 | Train MAE=4.9889, AUC=0.9291 | Val MAE=5.0130, Val RMSE=6.4161, Val R2=0.2005, Val Acc=0.8581, Val AUC=0.9307189437461523, ValScore=5.0823
+[Seed 44] Epoch 042 | TrainLoss=1.4041 | Train MAE=5.0424, AUC=0.9303 | Val MAE=5.0554, Val RMSE=6.5425, Val R2=0.1687, Val Acc=0.8549, Val AUC=0.9311089959652595, ValScore=5.1243
+[Seed 44] Epoch 043 | TrainLoss=1.4096 | Train MAE=4.9960, AUC=0.9297 | Val MAE=5.0256, Val RMSE=6.5004, Val R2=0.1794, Val Acc=0.8561, Val AUC=0.9305959103119348, ValScore=5.0950
+[Seed 44] Epoch 044 | TrainLoss=1.4025 | Train MAE=4.9882, AUC=0.9301 | Val MAE=5.0159, Val RMSE=6.4856, Val R2=0.1831, Val Acc=0.8587, Val AUC=0.9314733702717195, ValScore=5.0844
+[Seed 44] Epoch 045 | TrainLoss=1.4043 | Train MAE=5.0665, AUC=0.9302 | Val MAE=5.0915, Val RMSE=6.6630, Val R2=0.1378, Val Acc=0.8587, Val AUC=0.9313824736116127, ValScore=5.1601
+[Seed 44] Epoch 046 | TrainLoss=1.3988 | Train MAE=5.0934, AUC=0.9308 | Val MAE=5.1291, Val RMSE=6.3906, Val R2=0.2069, Val Acc=0.8595, Val AUC=0.9319568396822366, ValScore=5.1972
+[Seed 44] Epoch 047 | TrainLoss=1.3948 | Train MAE=4.9898, AUC=0.9308 | Val MAE=5.0162, Val RMSE=6.4161, Val R2=0.2005, Val Acc=0.8601, Val AUC=0.9318232515231885, ValScore=5.0844
+[Seed 44] Epoch 048 | TrainLoss=1.3945 | Train MAE=4.9888, AUC=0.9310 | Val MAE=5.0218, Val RMSE=6.4933, Val R2=0.1812, Val Acc=0.8585, Val AUC=0.9315608012012853, ValScore=5.0902
+[Seed 44] Epoch 049 | TrainLoss=1.3895 | Train MAE=5.0095, AUC=0.9312 | Val MAE=5.0313, Val RMSE=6.4904, Val R2=0.1819, Val Acc=0.8587, Val AUC=0.9317380260585129, ValScore=5.0996
+[Seed 44] Epoch 050 | TrainLoss=1.4014 | Train MAE=4.9967, AUC=0.9312 | Val MAE=5.0300, Val RMSE=6.5290, Val R2=0.1722, Val Acc=0.8575, Val AUC=0.9313654600253188, ValScore=5.0986
+[Seed 44] Epoch 051 | TrainLoss=1.3944 | Train MAE=5.0180, AUC=0.9303 | Val MAE=5.0531, Val RMSE=6.6166, Val R2=0.1498, Val Acc=0.8595, Val AUC=0.9304245141833447, ValScore=5.1227
+[Seed 44] Epoch 052 | TrainLoss=1.3981 | Train MAE=4.9916, AUC=0.9310 | Val MAE=5.0300, Val RMSE=6.5328, Val R2=0.1712, Val Acc=0.8607, Val AUC=0.9319700724715764, ValScore=5.0981
+[Seed 44] Epoch 053 | TrainLoss=1.3999 | Train MAE=5.0483, AUC=0.9299 | Val MAE=5.0810, Val RMSE=6.6303, Val R2=0.1463, Val Acc=0.8567, Val AUC=0.930204597827176, ValScore=5.1508
+[Seed 44] Epoch 054 | TrainLoss=1.3991 | Train MAE=5.0613, AUC=0.9314 | Val MAE=5.0955, Val RMSE=6.6454, Val R2=0.1424, Val Acc=0.8593, Val AUC=0.9326044586938482, ValScore=5.1629
+[Seed 44] Epoch 055 | TrainLoss=1.3963 | Train MAE=4.9810, AUC=0.9313 | Val MAE=5.0242, Val RMSE=6.4505, Val R2=0.1919, Val Acc=0.8585, Val AUC=0.9312761386972761, ValScore=5.0929
+[Seed 44] Epoch 056 | TrainLoss=1.3899 | Train MAE=4.9735, AUC=0.9320 | Val MAE=5.0157, Val RMSE=6.4356, Val R2=0.1957, Val Acc=0.8569, Val AUC=0.9317087248821181, ValScore=5.0840
+[Seed 44] Epoch 057 | TrainLoss=1.3908 | Train MAE=5.0263, AUC=0.9311 | Val MAE=5.0636, Val RMSE=6.6263, Val R2=0.1473, Val Acc=0.8553, Val AUC=0.9316497286963118, ValScore=5.1319
+[Seed 44] Epoch 058 | TrainLoss=1.3947 | Train MAE=5.0042, AUC=0.9314 | Val MAE=5.0455, Val RMSE=6.4991, Val R2=0.1797, Val Acc=0.8559, Val AUC=0.9317702415992267, ValScore=5.1137
+[Seed 44] Epoch 059 | TrainLoss=1.3847 | Train MAE=4.9783, AUC=0.9312 | Val MAE=5.0231, Val RMSE=6.4687, Val R2=0.1874, Val Acc=0.8571, Val AUC=0.9308563127021545, ValScore=5.0922
+[Seed 44] Epoch 060 | TrainLoss=1.3879 | Train MAE=4.9636, AUC=0.9323 | Val MAE=5.0168, Val RMSE=6.4416, Val R2=0.1942, Val Acc=0.8581, Val AUC=0.9320181200995358, ValScore=5.0847
+[Seed 44] Epoch 061 | TrainLoss=1.3865 | Train MAE=5.1134, AUC=0.9325 | Val MAE=5.1646, Val RMSE=6.8111, Val R2=0.0991, Val Acc=0.8591, Val AUC=0.9320663252607017, ValScore=5.2326
+[Seed 44] Epoch 062 | TrainLoss=1.3820 | Train MAE=5.0118, AUC=0.9326 | Val MAE=5.0533, Val RMSE=6.5541, Val R2=0.1658, Val Acc=0.8601, Val AUC=0.9322907313132536, ValScore=5.1211
+[Seed 44] Epoch 063 | TrainLoss=1.3825 | Train MAE=4.9857, AUC=0.9314 | Val MAE=5.0379, Val RMSE=6.3969, Val R2=0.2053, Val Acc=0.8579, Val AUC=0.9314766784690545, ValScore=5.1064
+[Seed 44] Epoch 064 | TrainLoss=1.3922 | Train MAE=5.0143, AUC=0.9323 | Val MAE=5.0645, Val RMSE=6.6095, Val R2=0.1516, Val Acc=0.8603, Val AUC=0.9317770942937063, ValScore=5.1327
+[Seed 44] Epoch 065 | TrainLoss=1.3827 | Train MAE=4.9610, AUC=0.9328 | Val MAE=5.0210, Val RMSE=6.4093, Val R2=0.2022, Val Acc=0.8575, Val AUC=0.9320592362664125, ValScore=5.0890
+[Seed 44] Epoch 066 | TrainLoss=1.3803 | Train MAE=4.9801, AUC=0.9317 | Val MAE=5.0352, Val RMSE=6.5214, Val R2=0.1741, Val Acc=0.8591, Val AUC=0.9310026610509228, ValScore=5.1042
+[Seed 44] Early stopping at epoch 66
+
+[Seed 44] Best epoch based on validation: 41
+[Seed 44] Best validation metrics: {'age_mae': 5.013028144836426, 'age_rmse': np.float64(6.4161291846875725), 'age_r2': 0.20053136348724365, 'dm_acc': 0.8581067672157174, 'dm_auc': 0.9307189437461523}
+[Seed 44] Final fixed-test metrics: {'age_mae': 5.100567817687988, 'age_rmse': np.float64(6.500396422988821), 'age_r2': 0.2060413360595703, 'dm_acc': 0.8575965068968939, 'dm_auc': 0.9267928922067787}
+[Seed 44] Model saved to: ../saved_models/mtl_graphormer_ple_internal_seed44_20261009_145335.pt
+[Seed 44] Test predictions saved to: ../results/internal_5seeds/test_predictions_seed44_20261009_145335.csv
+
+==========================================================================================
+Running seed = 45
+Subtrain size: 35268
+Validation size: 5039
+Fixed test size: 10077
+==========================================================================================
+[Seed 45] Epoch 001 | TrainLoss=42.1379 | Train MAE=5.8890, AUC=0.7659 | Val MAE=5.9488, Val RMSE=7.2075, Val R2=0.0077, Val Acc=0.6354, Val AUC=0.7534303643364986, ValScore=6.1954
+[Seed 45] Epoch 002 | TrainLoss=1.9940 | Train MAE=5.5772, AUC=0.8836 | Val MAE=5.6750, Val RMSE=7.1792, Val R2=0.0155, Val Acc=0.7853, Val AUC=0.872404246591139, ValScore=5.8026
+[Seed 45] Epoch 003 | TrainLoss=1.7576 | Train MAE=5.4952, AUC=0.9098 | Val MAE=5.6060, Val RMSE=7.0288, Val R2=0.0563, Val Acc=0.8099, Val AUC=0.8996381147182015, ValScore=5.7063
+[Seed 45] Epoch 004 | TrainLoss=1.7028 | Train MAE=5.4711, AUC=0.9127 | Val MAE=5.5951, Val RMSE=7.2736, Val R2=-0.0106, Val Acc=0.8260, Val AUC=0.9028867645010892, ValScore=5.6923
+[Seed 45] Epoch 005 | TrainLoss=1.6806 | Train MAE=5.3303, AUC=0.9153 | Val MAE=5.4339, Val RMSE=6.8703, Val R2=0.0984, Val Acc=0.8299, Val AUC=0.9058424025200271, ValScore=5.5281
+[Seed 45] Epoch 006 | TrainLoss=1.6110 | Train MAE=5.1168, AUC=0.9163 | Val MAE=5.1801, Val RMSE=6.6003, Val R2=0.1678, Val Acc=0.8321, Val AUC=0.9060642092746731, ValScore=5.2740
+[Seed 45] Epoch 007 | TrainLoss=1.5587 | Train MAE=5.1124, AUC=0.9181 | Val MAE=5.1590, Val RMSE=6.5099, Val R2=0.1905, Val Acc=0.8325, Val AUC=0.907958703615135, ValScore=5.2511
+[Seed 45] Epoch 008 | TrainLoss=1.5500 | Train MAE=5.0845, AUC=0.9187 | Val MAE=5.1544, Val RMSE=6.6076, Val R2=0.1660, Val Acc=0.8323, Val AUC=0.9091906132893752, ValScore=5.2452
+[Seed 45] Epoch 009 | TrainLoss=1.5471 | Train MAE=5.1957, AUC=0.9188 | Val MAE=5.2740, Val RMSE=6.9050, Val R2=0.0892, Val Acc=0.8329, Val AUC=0.908827971848186, ValScore=5.3652
+[Seed 45] Epoch 010 | TrainLoss=1.5475 | Train MAE=5.0684, AUC=0.9190 | Val MAE=5.1237, Val RMSE=6.5144, Val R2=0.1894, Val Acc=0.8269, Val AUC=0.9087343183569664, ValScore=5.2149
+[Seed 45] Epoch 011 | TrainLoss=1.5227 | Train MAE=5.0775, AUC=0.9202 | Val MAE=5.1460, Val RMSE=6.4891, Val R2=0.1956, Val Acc=0.8347, Val AUC=0.9098925024905999, ValScore=5.2361
+[Seed 45] Epoch 012 | TrainLoss=1.5200 | Train MAE=5.0603, AUC=0.9209 | Val MAE=5.1218, Val RMSE=6.5005, Val R2=0.1928, Val Acc=0.8395, Val AUC=0.911212236927422, ValScore=5.2106
+[Seed 45] Epoch 013 | TrainLoss=1.4848 | Train MAE=5.0922, AUC=0.9215 | Val MAE=5.1497, Val RMSE=6.4739, Val R2=0.1994, Val Acc=0.8387, Val AUC=0.9119090062994379, ValScore=5.2378
+[Seed 45] Epoch 014 | TrainLoss=1.4827 | Train MAE=5.0724, AUC=0.9215 | Val MAE=5.1271, Val RMSE=6.4609, Val R2=0.2026, Val Acc=0.8349, Val AUC=0.9116312752565114, ValScore=5.2154
+[Seed 45] Epoch 015 | TrainLoss=1.4773 | Train MAE=5.0575, AUC=0.9218 | Val MAE=5.1206, Val RMSE=6.5213, Val R2=0.1876, Val Acc=0.8363, Val AUC=0.9116775112525969, ValScore=5.2089
+[Seed 45] Epoch 016 | TrainLoss=1.4729 | Train MAE=5.0516, AUC=0.9225 | Val MAE=5.1142, Val RMSE=6.6049, Val R2=0.1667, Val Acc=0.8369, Val AUC=0.9122098947237088, ValScore=5.2019
+[Seed 45] Epoch 017 | TrainLoss=1.4632 | Train MAE=5.0517, AUC=0.9222 | Val MAE=5.1146, Val RMSE=6.4817, Val R2=0.1975, Val Acc=0.8389, Val AUC=0.9124033455011982, ValScore=5.2022
+[Seed 45] Epoch 018 | TrainLoss=1.4685 | Train MAE=5.0395, AUC=0.9237 | Val MAE=5.1115, Val RMSE=6.5406, Val R2=0.1828, Val Acc=0.8351, Val AUC=0.913563892632928, ValScore=5.1979
+[Seed 45] Epoch 019 | TrainLoss=1.4669 | Train MAE=5.0704, AUC=0.9235 | Val MAE=5.1375, Val RMSE=6.4518, Val R2=0.2048, Val Acc=0.8240, Val AUC=0.9137707337329635, ValScore=5.2237
+[Seed 45] Epoch 020 | TrainLoss=1.4613 | Train MAE=5.0321, AUC=0.9245 | Val MAE=5.1103, Val RMSE=6.5054, Val R2=0.1916, Val Acc=0.8331, Val AUC=0.9148761442424449, ValScore=5.1954
+[Seed 45] Epoch 021 | TrainLoss=1.4543 | Train MAE=5.0462, AUC=0.9250 | Val MAE=5.1198, Val RMSE=6.4623, Val R2=0.2023, Val Acc=0.8315, Val AUC=0.915033913748679, ValScore=5.2048
+[Seed 45] Epoch 022 | TrainLoss=1.4564 | Train MAE=5.0219, AUC=0.9253 | Val MAE=5.1038, Val RMSE=6.5908, Val R2=0.1702, Val Acc=0.8327, Val AUC=0.9157220975609448, ValScore=5.1881
+[Seed 45] Epoch 023 | TrainLoss=1.4559 | Train MAE=5.0393, AUC=0.9256 | Val MAE=5.1199, Val RMSE=6.5837, Val R2=0.1720, Val Acc=0.8311, Val AUC=0.915320702950975, ValScore=5.2046
+[Seed 45] Epoch 024 | TrainLoss=1.4551 | Train MAE=5.0700, AUC=0.9262 | Val MAE=5.1690, Val RMSE=6.6809, Val R2=0.1474, Val Acc=0.8398, Val AUC=0.9162268339543291, ValScore=5.2527
+[Seed 45] Epoch 025 | TrainLoss=1.4439 | Train MAE=5.0177, AUC=0.9260 | Val MAE=5.1042, Val RMSE=6.5066, Val R2=0.1913, Val Acc=0.8444, Val AUC=0.9158100010901298, ValScore=5.1884
+[Seed 45] Epoch 026 | TrainLoss=1.4533 | Train MAE=5.2740, AUC=0.9268 | Val MAE=5.3661, Val RMSE=7.0945, Val R2=0.0385, Val Acc=0.8434, Val AUC=0.9161663412030623, ValScore=5.4499
+[Seed 45] Epoch 027 | TrainLoss=1.4497 | Train MAE=5.0124, AUC=0.9281 | Val MAE=5.0993, Val RMSE=6.5394, Val R2=0.1831, Val Acc=0.8452, Val AUC=0.9182396357328162, ValScore=5.1810
+[Seed 45] Epoch 028 | TrainLoss=1.4320 | Train MAE=5.0156, AUC=0.9286 | Val MAE=5.0970, Val RMSE=6.4624, Val R2=0.2022, Val Acc=0.8460, Val AUC=0.9184783773071525, ValScore=5.1785
+[Seed 45] Epoch 029 | TrainLoss=1.4459 | Train MAE=5.0120, AUC=0.9288 | Val MAE=5.1028, Val RMSE=6.4934, Val R2=0.1946, Val Acc=0.8416, Val AUC=0.9179886853349817, ValScore=5.1848
+[Seed 45] Epoch 030 | TrainLoss=1.4365 | Train MAE=5.0599, AUC=0.9292 | Val MAE=5.1613, Val RMSE=6.7228, Val R2=0.1366, Val Acc=0.8454, Val AUC=0.9184340317095442, ValScore=5.2429
+[Seed 45] Epoch 031 | TrainLoss=1.4338 | Train MAE=5.0234, AUC=0.9294 | Val MAE=5.1115, Val RMSE=6.4811, Val R2=0.1976, Val Acc=0.8472, Val AUC=0.9188445632454866, ValScore=5.1926
+[Seed 45] Epoch 032 | TrainLoss=1.4329 | Train MAE=5.0507, AUC=0.9300 | Val MAE=5.1450, Val RMSE=6.6883, Val R2=0.1455, Val Acc=0.8452, Val AUC=0.9196104896951228, ValScore=5.2253
+[Seed 45] Epoch 033 | TrainLoss=1.4343 | Train MAE=4.9963, AUC=0.9298 | Val MAE=5.0864, Val RMSE=6.5473, Val R2=0.1811, Val Acc=0.8462, Val AUC=0.9198052007382636, ValScore=5.1666
+[Seed 45] Epoch 034 | TrainLoss=1.4355 | Train MAE=5.4714, AUC=0.9252 | Val MAE=5.5381, Val RMSE=6.6934, Val R2=0.1442, Val Acc=0.8426, Val AUC=0.9158467063272269, ValScore=5.6223
+[Seed 45] Epoch 035 | TrainLoss=1.4305 | Train MAE=5.0118, AUC=0.9297 | Val MAE=5.0955, Val RMSE=6.5147, Val R2=0.1893, Val Acc=0.8416, Val AUC=0.9187166462818699, ValScore=5.1768
+[Seed 45] Epoch 036 | TrainLoss=1.4286 | Train MAE=4.9951, AUC=0.9304 | Val MAE=5.0979, Val RMSE=6.5002, Val R2=0.1929, Val Acc=0.8454, Val AUC=0.9194436620295192, ValScore=5.1785
+[Seed 45] Epoch 037 | TrainLoss=1.4375 | Train MAE=5.0244, AUC=0.9308 | Val MAE=5.1170, Val RMSE=6.6467, Val R2=0.1561, Val Acc=0.8448, Val AUC=0.920141849200393, ValScore=5.1968
+[Seed 45] Epoch 038 | TrainLoss=1.4342 | Train MAE=5.0089, AUC=0.9301 | Val MAE=5.0941, Val RMSE=6.4369, Val R2=0.2085, Val Acc=0.8460, Val AUC=0.9188648850291152, ValScore=5.1752
+[Seed 45] Epoch 039 | TrainLoss=1.4207 | Train MAE=5.0059, AUC=0.9303 | Val MAE=5.1055, Val RMSE=6.5594, Val R2=0.1781, Val Acc=0.8397, Val AUC=0.9193725357868185, ValScore=5.1861
+[Seed 45] Epoch 040 | TrainLoss=1.4301 | Train MAE=5.0208, AUC=0.9299 | Val MAE=5.1248, Val RMSE=6.6545, Val R2=0.1541, Val Acc=0.8486, Val AUC=0.9192987314796086, ValScore=5.2055
+[Seed 45] Epoch 041 | TrainLoss=1.4219 | Train MAE=5.0678, AUC=0.9307 | Val MAE=5.1879, Val RMSE=6.7712, Val R2=0.1242, Val Acc=0.8482, Val AUC=0.9198775084800126, ValScore=5.2680
+[Seed 45] Epoch 042 | TrainLoss=1.4149 | Train MAE=4.9881, AUC=0.9314 | Val MAE=5.0929, Val RMSE=6.4764, Val R2=0.1988, Val Acc=0.8458, Val AUC=0.9204416348922189, ValScore=5.1725
+[Seed 45] Epoch 043 | TrainLoss=1.4296 | Train MAE=4.9938, AUC=0.9306 | Val MAE=5.0999, Val RMSE=6.6145, Val R2=0.1642, Val Acc=0.8466, Val AUC=0.9189129326570747, ValScore=5.1809
+[Seed 45] Epoch 044 | TrainLoss=1.4127 | Train MAE=4.9896, AUC=0.9312 | Val MAE=5.0903, Val RMSE=6.4786, Val R2=0.1982, Val Acc=0.8438, Val AUC=0.9199669873412615, ValScore=5.1703
+[Seed 45] Epoch 045 | TrainLoss=1.4204 | Train MAE=5.1912, AUC=0.9310 | Val MAE=5.3028, Val RMSE=6.9924, Val R2=0.0660, Val Acc=0.8460, Val AUC=0.9201175890866036, ValScore=5.3826
+[Seed 45] Epoch 046 | TrainLoss=1.4303 | Train MAE=4.9837, AUC=0.9320 | Val MAE=5.0863, Val RMSE=6.4481, Val R2=0.2058, Val Acc=0.8454, Val AUC=0.9210104873006181, ValScore=5.1653
+[Seed 45] Epoch 047 | TrainLoss=1.4074 | Train MAE=5.0294, AUC=0.9318 | Val MAE=5.1470, Val RMSE=6.6760, Val R2=0.1486, Val Acc=0.8470, Val AUC=0.9212439515125395, ValScore=5.2257
+[Seed 45] Epoch 048 | TrainLoss=1.4157 | Train MAE=4.9937, AUC=0.9320 | Val MAE=5.1026, Val RMSE=6.5333, Val R2=0.1846, Val Acc=0.8472, Val AUC=0.9216242366728482, ValScore=5.1810
+[Seed 45] Epoch 049 | TrainLoss=1.4077 | Train MAE=4.9868, AUC=0.9326 | Val MAE=5.0979, Val RMSE=6.5244, Val R2=0.1869, Val Acc=0.8464, Val AUC=0.9217078868054598, ValScore=5.1762
+[Seed 45] Epoch 050 | TrainLoss=1.4111 | Train MAE=4.9757, AUC=0.9316 | Val MAE=5.0830, Val RMSE=6.4918, Val R2=0.1950, Val Acc=0.8319, Val AUC=0.9204709360686139, ValScore=5.1626
+[Seed 45] Epoch 051 | TrainLoss=1.4097 | Train MAE=5.0360, AUC=0.9324 | Val MAE=5.1375, Val RMSE=6.4267, Val R2=0.2110, Val Acc=0.8474, Val AUC=0.9209806347580007, ValScore=5.2165
+[Seed 45] Epoch 052 | TrainLoss=1.4092 | Train MAE=4.9755, AUC=0.9316 | Val MAE=5.1072, Val RMSE=6.5450, Val R2=0.1817, Val Acc=0.8458, Val AUC=0.9205013399774538, ValScore=5.1867
+[Seed 45] Epoch 053 | TrainLoss=1.4169 | Train MAE=4.9750, AUC=0.9322 | Val MAE=5.1025, Val RMSE=6.5553, Val R2=0.1791, Val Acc=0.8456, Val AUC=0.9210416788754903, ValScore=5.1815
+[Seed 45] Epoch 054 | TrainLoss=1.4085 | Train MAE=4.9739, AUC=0.9331 | Val MAE=5.0970, Val RMSE=6.5514, Val R2=0.1801, Val Acc=0.8468, Val AUC=0.921698277279868, ValScore=5.1753
+[Seed 45] Epoch 055 | TrainLoss=1.4183 | Train MAE=4.9963, AUC=0.9326 | Val MAE=5.1046, Val RMSE=6.4376, Val R2=0.2084, Val Acc=0.8434, Val AUC=0.9205918428045449, ValScore=5.1841
+[Seed 45] Epoch 056 | TrainLoss=1.4090 | Train MAE=5.0024, AUC=0.9332 | Val MAE=5.1157, Val RMSE=6.4431, Val R2=0.2070, Val Acc=0.8480, Val AUC=0.9215190044909567, ValScore=5.1941
+[Seed 45] Epoch 057 | TrainLoss=1.4045 | Train MAE=5.0047, AUC=0.9312 | Val MAE=5.1144, Val RMSE=6.5973, Val R2=0.1686, Val Acc=0.8428, Val AUC=0.9192131909485199, ValScore=5.1952
+[Seed 45] Epoch 058 | TrainLoss=1.3973 | Train MAE=4.9700, AUC=0.9332 | Val MAE=5.0851, Val RMSE=6.4750, Val R2=0.1991, Val Acc=0.8460, Val AUC=0.9214110154779526, ValScore=5.1637
+[Seed 45] Epoch 059 | TrainLoss=1.4008 | Train MAE=4.9550, AUC=0.9333 | Val MAE=5.0815, Val RMSE=6.5271, Val R2=0.1862, Val Acc=0.8464, Val AUC=0.9215041176029495, ValScore=5.1600
+[Seed 45] Epoch 060 | TrainLoss=1.3919 | Train MAE=4.9712, AUC=0.9315 | Val MAE=5.0844, Val RMSE=6.4577, Val R2=0.2034, Val Acc=0.8452, Val AUC=0.9196061575319461, ValScore=5.1648
+[Seed 45] Epoch 061 | TrainLoss=1.3937 | Train MAE=4.9685, AUC=0.9327 | Val MAE=5.0836, Val RMSE=6.4707, Val R2=0.2002, Val Acc=0.8450, Val AUC=0.9211819621958114, ValScore=5.1625
+[Seed 45] Epoch 062 | TrainLoss=1.3941 | Train MAE=4.9801, AUC=0.9335 | Val MAE=5.1078, Val RMSE=6.4439, Val R2=0.2068, Val Acc=0.8404, Val AUC=0.9219263853627706, ValScore=5.1859
+[Seed 45] Epoch 063 | TrainLoss=1.3862 | Train MAE=4.9451, AUC=0.9323 | Val MAE=5.0753, Val RMSE=6.5170, Val R2=0.1887, Val Acc=0.8450, Val AUC=0.9206599759163234, ValScore=5.1546
+[Seed 45] Epoch 064 | TrainLoss=1.3804 | Train MAE=5.0707, AUC=0.9339 | Val MAE=5.1815, Val RMSE=6.4520, Val R2=0.2048, Val Acc=0.8472, Val AUC=0.9219772685884458, ValScore=5.2595
+[Seed 45] Epoch 065 | TrainLoss=1.3923 | Train MAE=4.9717, AUC=0.9334 | Val MAE=5.0806, Val RMSE=6.5424, Val R2=0.1824, Val Acc=0.8472, Val AUC=0.9209955216460077, ValScore=5.1596
+[Seed 45] Epoch 066 | TrainLoss=1.3876 | Train MAE=5.1359, AUC=0.9334 | Val MAE=5.2544, Val RMSE=6.4801, Val R2=0.1979, Val Acc=0.8478, Val AUC=0.9214654432007723, ValScore=5.3329
+[Seed 45] Epoch 067 | TrainLoss=1.3931 | Train MAE=4.9841, AUC=0.9341 | Val MAE=5.1092, Val RMSE=6.4239, Val R2=0.2117, Val Acc=0.8466, Val AUC=0.9219949123075654, ValScore=5.1872
+[Seed 45] Epoch 068 | TrainLoss=1.3822 | Train MAE=5.0030, AUC=0.9336 | Val MAE=5.1208, Val RMSE=6.4178, Val R2=0.2132, Val Acc=0.8442, Val AUC=0.920641229464759, ValScore=5.2001
+[Seed 45] Epoch 069 | TrainLoss=1.3884 | Train MAE=4.9708, AUC=0.9340 | Val MAE=5.0869, Val RMSE=6.5454, Val R2=0.1816, Val Acc=0.8373, Val AUC=0.9213356358386784, ValScore=5.1656
+[Seed 45] Epoch 070 | TrainLoss=1.3765 | Train MAE=4.9944, AUC=0.9346 | Val MAE=5.1363, Val RMSE=6.4408, Val R2=0.2076, Val Acc=0.8450, Val AUC=0.9221875754190225, ValScore=5.2141
+[Seed 45] Epoch 071 | TrainLoss=1.3740 | Train MAE=5.0768, AUC=0.9338 | Val MAE=5.2249, Val RMSE=6.8906, Val R2=0.0930, Val Acc=0.8456, Val AUC=0.9218999197840914, ValScore=5.3030
+[Seed 45] Epoch 072 | TrainLoss=1.3815 | Train MAE=4.9548, AUC=0.9340 | Val MAE=5.0785, Val RMSE=6.4711, Val R2=0.2001, Val Acc=0.8436, Val AUC=0.920248341647936, ValScore=5.1582
+[Seed 45] Epoch 073 | TrainLoss=1.3747 | Train MAE=4.9767, AUC=0.9344 | Val MAE=5.1118, Val RMSE=6.4699, Val R2=0.2004, Val Acc=0.8464, Val AUC=0.9215835931055908, ValScore=5.1903
+[Seed 45] Epoch 074 | TrainLoss=1.3629 | Train MAE=5.0328, AUC=0.9344 | Val MAE=5.1619, Val RMSE=6.4292, Val R2=0.2104, Val Acc=0.8474, Val AUC=0.9207910435440688, ValScore=5.2411
+[Seed 45] Epoch 075 | TrainLoss=1.3667 | Train MAE=4.9770, AUC=0.9348 | Val MAE=5.1332, Val RMSE=6.6215, Val R2=0.1625, Val Acc=0.8480, Val AUC=0.9214333064266617, ValScore=5.2118
+[Seed 45] Epoch 076 | TrainLoss=1.3654 | Train MAE=5.0416, AUC=0.9341 | Val MAE=5.1769, Val RMSE=6.4446, Val R2=0.2066, Val Acc=0.8454, Val AUC=0.9213427248329675, ValScore=5.2556
+[Seed 45] Epoch 077 | TrainLoss=1.3639 | Train MAE=4.9794, AUC=0.9348 | Val MAE=5.1147, Val RMSE=6.4296, Val R2=0.2103, Val Acc=0.8480, Val AUC=0.9211976367498504, ValScore=5.1935
+[Seed 45] Epoch 078 | TrainLoss=1.3577 | Train MAE=4.9290, AUC=0.9353 | Val MAE=5.1084, Val RMSE=6.5758, Val R2=0.1740, Val Acc=0.8452, Val AUC=0.9225437579987485, ValScore=5.1858
+[Seed 45] Epoch 079 | TrainLoss=1.3572 | Train MAE=4.9316, AUC=0.9352 | Val MAE=5.0837, Val RMSE=6.5380, Val R2=0.1835, Val Acc=0.8478, Val AUC=0.9212652184954067, ValScore=5.1625
+[Seed 45] Epoch 080 | TrainLoss=1.3490 | Train MAE=4.9548, AUC=0.9357 | Val MAE=5.1009, Val RMSE=6.4401, Val R2=0.2077, Val Acc=0.8450, Val AUC=0.9219289058940734, ValScore=5.1790
+[Seed 45] Epoch 081 | TrainLoss=1.3527 | Train MAE=4.9931, AUC=0.9344 | Val MAE=5.1462, Val RMSE=6.7221, Val R2=0.1368, Val Acc=0.8456, Val AUC=0.9198364710797389, ValScore=5.2264
+[Seed 45] Epoch 082 | TrainLoss=1.3627 | Train MAE=5.0040, AUC=0.9352 | Val MAE=5.1597, Val RMSE=6.7593, Val R2=0.1273, Val Acc=0.8452, Val AUC=0.9216837842248766, ValScore=5.2380
+[Seed 45] Epoch 083 | TrainLoss=1.3456 | Train MAE=4.9503, AUC=0.9351 | Val MAE=5.1165, Val RMSE=6.5253, Val R2=0.1866, Val Acc=0.8448, Val AUC=0.9204372239624391, ValScore=5.1961
+[Seed 45] Epoch 084 | TrainLoss=1.3441 | Train MAE=4.9354, AUC=0.9353 | Val MAE=5.1047, Val RMSE=6.4566, Val R2=0.2037, Val Acc=0.8456, Val AUC=0.921357375421165, ValScore=5.1833
+[Seed 45] Epoch 085 | TrainLoss=1.3468 | Train MAE=4.9169, AUC=0.9347 | Val MAE=5.1048, Val RMSE=6.6224, Val R2=0.1622, Val Acc=0.8430, Val AUC=0.9201316095419754, ValScore=5.1847
+[Seed 45] Epoch 086 | TrainLoss=1.3434 | Train MAE=4.9453, AUC=0.9356 | Val MAE=5.1075, Val RMSE=6.4441, Val R2=0.2068, Val Acc=0.8466, Val AUC=0.9216713391015692, ValScore=5.1859
+[Seed 45] Epoch 087 | TrainLoss=1.3507 | Train MAE=4.9199, AUC=0.9357 | Val MAE=5.0964, Val RMSE=6.5483, Val R2=0.1809, Val Acc=0.8446, Val AUC=0.9210960278317066, ValScore=5.1753
+[Seed 45] Epoch 088 | TrainLoss=1.3493 | Train MAE=4.9520, AUC=0.9360 | Val MAE=5.1044, Val RMSE=6.5728, Val R2=0.1747, Val Acc=0.8480, Val AUC=0.9219965664062327, ValScore=5.1824
+[Seed 45] Early stopping at epoch 88
+
+[Seed 45] Best epoch based on validation: 63
+[Seed 45] Best validation metrics: {'age_mae': 5.07528018951416, 'age_rmse': np.float64(6.5169532940490225), 'age_r2': 0.1887143850326538, 'dm_acc': 0.8450089303433221, 'dm_auc': 0.9206599759163234}
+[Seed 45] Final fixed-test metrics: {'age_mae': 5.086132049560547, 'age_rmse': np.float64(6.530746805619655), 'age_r2': 0.1986100673675537, 'dm_acc': 0.8572987992458073, 'dm_auc': 0.9264491578429301}
+[Seed 45] Model saved to: ../saved_models/mtl_graphormer_ple_internal_seed45_20261009_145335.pt
+[Seed 45] Test predictions saved to: ../results/internal_5seeds/test_predictions_seed45_20261009_145335.csv
+
+==========================================================================================
+Running seed = 46
+Subtrain size: 35268
+Validation size: 5039
+Fixed test size: 10077
+==========================================================================================
+[Seed 46] Epoch 001 | TrainLoss=42.9813 | Train MAE=5.8101, AUC=0.7631 | Val MAE=5.7832, Val RMSE=7.1444, Val R2=0.0010, Val Acc=0.6664, Val AUC=0.7710860559797399, ValScore=6.0121
+[Seed 46] Epoch 002 | TrainLoss=2.0511 | Train MAE=5.7204, AUC=0.7651 | Val MAE=5.6934, Val RMSE=6.9246, Val R2=0.0615, Val Acc=0.7033, Val AUC=0.7747286175452923, ValScore=5.9187
+[Seed 46] Epoch 003 | TrainLoss=1.8935 | Train MAE=5.5527, AUC=0.8740 | Val MAE=5.5361, Val RMSE=6.8742, Val R2=0.0752, Val Acc=0.8033, Val AUC=0.8818631704376966, ValScore=5.6542
+[Seed 46] Epoch 004 | TrainLoss=1.7559 | Train MAE=5.4651, AUC=0.9093 | Val MAE=5.4449, Val RMSE=6.9318, Val R2=0.0596, Val Acc=0.8456, Val AUC=0.9189598775525891, ValScore=5.5259
+[Seed 46] Epoch 005 | TrainLoss=1.6938 | Train MAE=5.4443, AUC=0.9131 | Val MAE=5.4490, Val RMSE=6.9644, Val R2=0.0507, Val Acc=0.8543, Val AUC=0.9234096392678612, ValScore=5.5256
+[Seed 46] Epoch 006 | TrainLoss=1.6821 | Train MAE=5.3687, AUC=0.9147 | Val MAE=5.3642, Val RMSE=6.8850, Val R2=0.0722, Val Acc=0.8581, Val AUC=0.9245418304224348, ValScore=5.4396
+[Seed 46] Epoch 007 | TrainLoss=1.6047 | Train MAE=5.2962, AUC=0.9147 | Val MAE=5.2975, Val RMSE=6.4918, Val R2=0.1752, Val Acc=0.8502, Val AUC=0.9247407160955456, ValScore=5.3728
+[Seed 46] Epoch 008 | TrainLoss=1.5549 | Train MAE=5.2141, AUC=0.9163 | Val MAE=5.2165, Val RMSE=6.4457, Val R2=0.1869, Val Acc=0.8468, Val AUC=0.925520347934141, ValScore=5.2910
+[Seed 46] Epoch 009 | TrainLoss=1.5322 | Train MAE=5.1243, AUC=0.9174 | Val MAE=5.1340, Val RMSE=6.6266, Val R2=0.1406, Val Acc=0.8406, Val AUC=0.9269355474940562, ValScore=5.2071
+[Seed 46] Epoch 010 | TrainLoss=1.5150 | Train MAE=5.1072, AUC=0.9173 | Val MAE=5.1136, Val RMSE=6.5601, Val R2=0.1578, Val Acc=0.8587, Val AUC=0.9267360316881197, ValScore=5.1869
+[Seed 46] Epoch 011 | TrainLoss=1.5160 | Train MAE=5.0864, AUC=0.9185 | Val MAE=5.0904, Val RMSE=6.4444, Val R2=0.1872, Val Acc=0.8436, Val AUC=0.9273806575688089, ValScore=5.1630
+[Seed 46] Epoch 012 | TrainLoss=1.5001 | Train MAE=5.0986, AUC=0.9189 | Val MAE=5.0947, Val RMSE=6.4004, Val R2=0.1983, Val Acc=0.8593, Val AUC=0.9283822536952564, ValScore=5.1663
+[Seed 46] Epoch 013 | TrainLoss=1.4898 | Train MAE=5.0633, AUC=0.9203 | Val MAE=5.0675, Val RMSE=6.4528, Val R2=0.1851, Val Acc=0.8615, Val AUC=0.9294092126679384, ValScore=5.1380
+[Seed 46] Epoch 014 | TrainLoss=1.4890 | Train MAE=5.1640, AUC=0.9207 | Val MAE=5.1819, Val RMSE=6.7835, Val R2=0.0994, Val Acc=0.8597, Val AUC=0.9295180681135776, ValScore=5.2524
+[Seed 46] Epoch 015 | TrainLoss=1.4796 | Train MAE=5.0627, AUC=0.9217 | Val MAE=5.0497, Val RMSE=6.4016, Val R2=0.1980, Val Acc=0.8591, Val AUC=0.930519979306438, ValScore=5.1192
+[Seed 46] Epoch 016 | TrainLoss=1.4812 | Train MAE=5.1747, AUC=0.9228 | Val MAE=5.1949, Val RMSE=6.8047, Val R2=0.0938, Val Acc=0.8563, Val AUC=0.9313881448070439, ValScore=5.2635
+[Seed 46] Epoch 017 | TrainLoss=1.4813 | Train MAE=5.0558, AUC=0.9228 | Val MAE=5.0587, Val RMSE=6.4618, Val R2=0.1828, Val Acc=0.8599, Val AUC=0.9312024131566694, ValScore=5.1275
+[Seed 46] Epoch 018 | TrainLoss=1.4767 | Train MAE=5.0542, AUC=0.9232 | Val MAE=5.0522, Val RMSE=6.4090, Val R2=0.1961, Val Acc=0.8535, Val AUC=0.9310404690204647, ValScore=5.1212
+[Seed 46] Epoch 019 | TrainLoss=1.4787 | Train MAE=5.0654, AUC=0.9238 | Val MAE=5.0682, Val RMSE=6.3862, Val R2=0.2018, Val Acc=0.8623, Val AUC=0.9317396013905771, ValScore=5.1364
+[Seed 46] Epoch 020 | TrainLoss=1.4811 | Train MAE=5.0725, AUC=0.9241 | Val MAE=5.0649, Val RMSE=6.5450, Val R2=0.1616, Val Acc=0.8567, Val AUC=0.9318618471587625, ValScore=5.1330
+[Seed 46] Epoch 021 | TrainLoss=1.4752 | Train MAE=5.0681, AUC=0.9245 | Val MAE=5.0875, Val RMSE=6.5816, Val R2=0.1522, Val Acc=0.8589, Val AUC=0.9321049208962757, ValScore=5.1554
+[Seed 46] Epoch 022 | TrainLoss=1.4743 | Train MAE=5.0303, AUC=0.9250 | Val MAE=5.0337, Val RMSE=6.4600, Val R2=0.1833, Val Acc=0.8611, Val AUC=0.9326310818057338, ValScore=5.1010
+[Seed 46] Epoch 023 | TrainLoss=1.4624 | Train MAE=5.0356, AUC=0.9257 | Val MAE=5.0345, Val RMSE=6.4294, Val R2=0.1910, Val Acc=0.8567, Val AUC=0.9325998902308619, ValScore=5.1019
+[Seed 46] Epoch 024 | TrainLoss=1.4589 | Train MAE=5.0353, AUC=0.9259 | Val MAE=5.0293, Val RMSE=6.3900, Val R2=0.2009, Val Acc=0.8551, Val AUC=0.9324555898137769, ValScore=5.0968
+[Seed 46] Epoch 025 | TrainLoss=1.4591 | Train MAE=5.0679, AUC=0.9265 | Val MAE=5.0951, Val RMSE=6.5855, Val R2=0.1512, Val Acc=0.8581, Val AUC=0.9329217305715872, ValScore=5.1622
+[Seed 46] Epoch 026 | TrainLoss=1.4596 | Train MAE=5.0494, AUC=0.9265 | Val MAE=5.0516, Val RMSE=6.5157, Val R2=0.1691, Val Acc=0.8633, Val AUC=0.9331459003243293, ValScore=5.1185
+[Seed 46] Epoch 027 | TrainLoss=1.4508 | Train MAE=5.0153, AUC=0.9259 | Val MAE=5.0162, Val RMSE=6.4273, Val R2=0.1915, Val Acc=0.8430, Val AUC=0.9329960862450196, ValScore=5.0832
+[Seed 46] Epoch 028 | TrainLoss=1.4547 | Train MAE=5.0422, AUC=0.9265 | Val MAE=5.0552, Val RMSE=6.5288, Val R2=0.1658, Val Acc=0.8629, Val AUC=0.9327788479533601, ValScore=5.1224
+[Seed 46] Epoch 029 | TrainLoss=1.4440 | Train MAE=5.0434, AUC=0.9270 | Val MAE=5.0420, Val RMSE=6.3586, Val R2=0.2087, Val Acc=0.8635, Val AUC=0.9328139778583927, ValScore=5.1092
+[Seed 46] Epoch 030 | TrainLoss=1.4474 | Train MAE=5.0615, AUC=0.9275 | Val MAE=5.0769, Val RMSE=6.6010, Val R2=0.1472, Val Acc=0.8631, Val AUC=0.9334790830559175, ValScore=5.1434
+[Seed 46] Epoch 031 | TrainLoss=1.4415 | Train MAE=5.0094, AUC=0.9275 | Val MAE=5.0112, Val RMSE=6.3979, Val R2=0.1989, Val Acc=0.8637, Val AUC=0.9335724214807238, ValScore=5.0776
+[Seed 46] Epoch 032 | TrainLoss=1.4419 | Train MAE=5.0514, AUC=0.9279 | Val MAE=5.0425, Val RMSE=6.3477, Val R2=0.2114, Val Acc=0.8619, Val AUC=0.9334212683691596, ValScore=5.1091
+[Seed 46] Epoch 033 | TrainLoss=1.4413 | Train MAE=5.0375, AUC=0.9279 | Val MAE=5.0406, Val RMSE=6.4784, Val R2=0.1786, Val Acc=0.8623, Val AUC=0.9336021164901349, ValScore=5.1070
+[Seed 46] Epoch 034 | TrainLoss=1.4374 | Train MAE=5.0185, AUC=0.9279 | Val MAE=5.0441, Val RMSE=6.5124, Val R2=0.1699, Val Acc=0.8613, Val AUC=0.9336570955791772, ValScore=5.1104
+[Seed 46] Epoch 035 | TrainLoss=1.4437 | Train MAE=5.0266, AUC=0.9283 | Val MAE=5.0323, Val RMSE=6.5288, Val R2=0.1658, Val Acc=0.8601, Val AUC=0.9331358181991183, ValScore=5.0992
+[Seed 46] Epoch 036 | TrainLoss=1.4253 | Train MAE=5.0954, AUC=0.9283 | Val MAE=5.0920, Val RMSE=6.3548, Val R2=0.2096, Val Acc=0.8607, Val AUC=0.9334174875722054, ValScore=5.1586
+[Seed 46] Epoch 037 | TrainLoss=1.4291 | Train MAE=5.0233, AUC=0.9280 | Val MAE=5.0310, Val RMSE=6.4926, Val R2=0.1750, Val Acc=0.8551, Val AUC=0.9327684507617361, ValScore=5.0982
+[Seed 46] Epoch 038 | TrainLoss=1.4262 | Train MAE=5.0136, AUC=0.9288 | Val MAE=5.0145, Val RMSE=6.3756, Val R2=0.2045, Val Acc=0.8625, Val AUC=0.9333651865476724, ValScore=5.0812
+[Seed 46] Epoch 039 | TrainLoss=1.4330 | Train MAE=5.1103, AUC=0.9289 | Val MAE=5.1094, Val RMSE=6.3505, Val R2=0.2107, Val Acc=0.8619, Val AUC=0.9335762810442814, ValScore=5.1759
+[Seed 46] Epoch 040 | TrainLoss=1.4227 | Train MAE=5.0143, AUC=0.9276 | Val MAE=5.0161, Val RMSE=6.4062, Val R2=0.1968, Val Acc=0.8631, Val AUC=0.9323631178216056, ValScore=5.0837
+[Seed 46] Epoch 041 | TrainLoss=1.4194 | Train MAE=5.0034, AUC=0.9287 | Val MAE=5.0176, Val RMSE=6.4392, Val R2=0.1885, Val Acc=0.8603, Val AUC=0.9337554750665893, ValScore=5.0839
+[Seed 46] Epoch 042 | TrainLoss=1.4222 | Train MAE=5.0080, AUC=0.9285 | Val MAE=5.0202, Val RMSE=6.4616, Val R2=0.1828, Val Acc=0.8615, Val AUC=0.9337317663190223, ValScore=5.0865
+[Seed 46] Epoch 043 | TrainLoss=1.4149 | Train MAE=5.0100, AUC=0.9294 | Val MAE=5.0210, Val RMSE=6.3560, Val R2=0.2093, Val Acc=0.8629, Val AUC=0.9346138735083968, ValScore=5.0864
+[Seed 46] Epoch 044 | TrainLoss=1.4119 | Train MAE=5.0154, AUC=0.9292 | Val MAE=5.0333, Val RMSE=6.5097, Val R2=0.1707, Val Acc=0.8607, Val AUC=0.9333617208171311, ValScore=5.0999
+[Seed 46] Epoch 045 | TrainLoss=1.4183 | Train MAE=5.0103, AUC=0.9290 | Val MAE=5.0144, Val RMSE=6.3667, Val R2=0.2067, Val Acc=0.8623, Val AUC=0.9342580847616869, ValScore=5.0801
+[Seed 46] Epoch 046 | TrainLoss=1.4107 | Train MAE=4.9980, AUC=0.9292 | Val MAE=5.0026, Val RMSE=6.3866, Val R2=0.2017, Val Acc=0.8627, Val AUC=0.9345520417248752, ValScore=5.0681
+[Seed 46] Epoch 047 | TrainLoss=1.4144 | Train MAE=5.1839, AUC=0.9296 | Val MAE=5.2293, Val RMSE=6.8960, Val R2=0.0693, Val Acc=0.8643, Val AUC=0.9331630714438297, ValScore=5.2962
+[Seed 46] Epoch 048 | TrainLoss=1.4110 | Train MAE=4.9949, AUC=0.9296 | Val MAE=5.0207, Val RMSE=6.4462, Val R2=0.1868, Val Acc=0.8617, Val AUC=0.9330764281802961, ValScore=5.0876
+[Seed 46] Epoch 049 | TrainLoss=1.4091 | Train MAE=5.4722, AUC=0.9292 | Val MAE=5.5298, Val RMSE=7.3291, Val R2=-0.0513, Val Acc=0.8587, Val AUC=0.9330948595654477, ValScore=5.5967
+[Seed 46] Epoch 050 | TrainLoss=1.4088 | Train MAE=5.0453, AUC=0.9301 | Val MAE=5.0845, Val RMSE=6.5888, Val R2=0.1504, Val Acc=0.8641, Val AUC=0.934399864647469, ValScore=5.1501
+[Seed 46] Epoch 051 | TrainLoss=1.4075 | Train MAE=5.0288, AUC=0.9294 | Val MAE=5.0464, Val RMSE=6.4018, Val R2=0.1979, Val Acc=0.8599, Val AUC=0.93261406821944, ValScore=5.1138
+[Seed 46] Epoch 052 | TrainLoss=1.4170 | Train MAE=4.9936, AUC=0.9295 | Val MAE=5.0186, Val RMSE=6.3965, Val R2=0.1992, Val Acc=0.8637, Val AUC=0.9332229340622711, ValScore=5.0854
+[Seed 46] Epoch 053 | TrainLoss=1.4186 | Train MAE=5.0210, AUC=0.9305 | Val MAE=5.0352, Val RMSE=6.3531, Val R2=0.2101, Val Acc=0.8583, Val AUC=0.9340082370962975, ValScore=5.1012
+[Seed 46] Epoch 054 | TrainLoss=1.4126 | Train MAE=4.9937, AUC=0.9304 | Val MAE=5.0235, Val RMSE=6.4171, Val R2=0.1941, Val Acc=0.8629, Val AUC=0.933564308520593, ValScore=5.0900
+[Seed 46] Epoch 055 | TrainLoss=1.4016 | Train MAE=5.0172, AUC=0.9300 | Val MAE=5.0447, Val RMSE=6.4691, Val R2=0.1810, Val Acc=0.8629, Val AUC=0.9341572635095753, ValScore=5.1105
+[Seed 46] Epoch 056 | TrainLoss=1.4097 | Train MAE=5.0515, AUC=0.9304 | Val MAE=5.0630, Val RMSE=6.3314, Val R2=0.2154, Val Acc=0.8637, Val AUC=0.93433637876528, ValScore=5.1287
+[Seed 46] Epoch 057 | TrainLoss=1.4042 | Train MAE=5.1255, AUC=0.9306 | Val MAE=5.1425, Val RMSE=6.3825, Val R2=0.2027, Val Acc=0.8629, Val AUC=0.9333620358835438, ValScore=5.2092
+[Seed 46] Epoch 058 | TrainLoss=1.4078 | Train MAE=4.9901, AUC=0.9309 | Val MAE=5.0182, Val RMSE=6.4566, Val R2=0.1841, Val Acc=0.8653, Val AUC=0.9340302917451969, ValScore=5.0841
+[Seed 46] Epoch 059 | TrainLoss=1.3969 | Train MAE=5.0346, AUC=0.9301 | Val MAE=5.0661, Val RMSE=6.5179, Val R2=0.1686, Val Acc=0.8621, Val AUC=0.933015147762997, ValScore=5.1331
+[Seed 46] Epoch 060 | TrainLoss=1.3992 | Train MAE=5.0125, AUC=0.9307 | Val MAE=5.0600, Val RMSE=6.5841, Val R2=0.1516, Val Acc=0.8633, Val AUC=0.9341900304165115, ValScore=5.1258
+[Seed 46] Epoch 061 | TrainLoss=1.3978 | Train MAE=4.9973, AUC=0.9302 | Val MAE=5.0200, Val RMSE=6.4441, Val R2=0.1873, Val Acc=0.8664, Val AUC=0.934430268556309, ValScore=5.0856
+[Seed 46] Epoch 062 | TrainLoss=1.3956 | Train MAE=5.0642, AUC=0.9298 | Val MAE=5.0877, Val RMSE=6.3696, Val R2=0.2060, Val Acc=0.8629, Val AUC=0.9323946244628906, ValScore=5.1553
+[Seed 46] Epoch 063 | TrainLoss=1.3972 | Train MAE=4.9809, AUC=0.9312 | Val MAE=5.0109, Val RMSE=6.4425, Val R2=0.1877, Val Acc=0.8643, Val AUC=0.9344789463170942, ValScore=5.0764
+[Seed 46] Epoch 064 | TrainLoss=1.3852 | Train MAE=4.9931, AUC=0.9310 | Val MAE=5.0244, Val RMSE=6.3578, Val R2=0.2089, Val Acc=0.8573, Val AUC=0.934189085217273, ValScore=5.0902
+[Seed 46] Epoch 065 | TrainLoss=1.3918 | Train MAE=4.9951, AUC=0.9307 | Val MAE=5.0428, Val RMSE=6.4434, Val R2=0.1874, Val Acc=0.8645, Val AUC=0.9334269395645909, ValScore=5.1093
+[Seed 46] Epoch 066 | TrainLoss=1.3973 | Train MAE=4.9763, AUC=0.9313 | Val MAE=5.0158, Val RMSE=6.3795, Val R2=0.2035, Val Acc=0.8597, Val AUC=0.9342205918585579, ValScore=5.0816
+[Seed 46] Epoch 067 | TrainLoss=1.3968 | Train MAE=4.9824, AUC=0.9310 | Val MAE=5.0177, Val RMSE=6.4748, Val R2=0.1795, Val Acc=0.8619, Val AUC=0.9339723195252327, ValScore=5.0838
+[Seed 46] Epoch 068 | TrainLoss=1.3945 | Train MAE=5.0068, AUC=0.9311 | Val MAE=5.0499, Val RMSE=6.4570, Val R2=0.1840, Val Acc=0.8631, Val AUC=0.9331822904950134, ValScore=5.1167
+[Seed 46] Epoch 069 | TrainLoss=1.3883 | Train MAE=4.9874, AUC=0.9299 | Val MAE=5.0233, Val RMSE=6.3671, Val R2=0.2066, Val Acc=0.8627, Val AUC=0.9340680997147388, ValScore=5.0892
+[Seed 46] Epoch 070 | TrainLoss=1.3897 | Train MAE=5.1274, AUC=0.9312 | Val MAE=5.1914, Val RMSE=6.8404, Val R2=0.0842, Val Acc=0.8615, Val AUC=0.9342313041165948, ValScore=5.2572
+[Seed 46] Epoch 071 | TrainLoss=1.3837 | Train MAE=5.0894, AUC=0.9307 | Val MAE=5.1238, Val RMSE=6.3729, Val R2=0.2051, Val Acc=0.8613, Val AUC=0.9322920703455082, ValScore=5.1915
+[Seed 46] Early stopping at epoch 71
+
+[Seed 46] Best epoch based on validation: 46
+[Seed 46] Best validation metrics: {'age_mae': 5.002610206604004, 'age_rmse': np.float64(6.3865637524196615), 'age_r2': 0.20172160863876343, 'dm_acc': 0.8626711649136733, 'dm_auc': 0.9345520417248752}
+[Seed 46] Final fixed-test metrics: {'age_mae': 5.10944938659668, 'age_rmse': np.float64(6.5049683582847), 'age_r2': 0.20492416620254517, 'dm_acc': 0.8552148456882008, 'dm_auc': 0.9268486515457688}
+[Seed 46] Model saved to: ../saved_models/mtl_graphormer_ple_internal_seed46_20261009_145335.pt
+[Seed 46] Test predictions saved to: ../results/internal_5seeds/test_predictions_seed46_20261009_145335.csv
+
+==========================================================================================
+Per-seed test metrics
+   seed  best_epoch  best_val_score  val_age_mae  val_age_rmse  val_age_r2  val_dm_acc  val_dm_auc  test_age_mae  test_age_rmse  test_age_r2  test_dm_acc  test_dm_auc
+0    42          68        5.151543     5.077607      6.441143    0.196212    0.853939    0.926063      5.111638       6.493307     0.207772     0.859383     0.928952
+1    43          71        5.092548     5.017058      6.377795    0.220030    0.845406    0.924511      5.091355       6.488685     0.208900     0.862558     0.928548
+2    44          41        5.082309     5.013028      6.416129    0.200531    0.858107    0.930719      5.100568       6.500396     0.206041     0.857597     0.926793
+3    45          63        5.154620     5.075280      6.516953    0.188714    0.845009    0.920660      5.086132       6.530747     0.198610     0.857299     0.926449
+4    46          46        5.068058     5.002610      6.386564    0.201722    0.862671    0.934552      5.109449       6.504968     0.204924     0.855215     0.926849
+Saved per-seed metrics to: ../results/internal_5seeds/test_metrics_5seeds_20261009_145335.csv
+
+Mean ± SD over 5 seeds
+test_age_mae: 5.099828 ± 0.011090
+test_age_rmse: 6.503621 ± 0.016412
+test_age_r2: 0.205249 ± 0.004016
+test_dm_acc: 0.858410 ± 0.002750
+test_dm_auc: 0.927518 ± 0.001144
+
+Saved mean±SD summary to: ../results/internal_5seeds/test_metrics_5seeds_mean_sd_20261009_145335.csv
+
+Experiment finished.
+Reminder:
+1. These 5-seed results are for internal robustness/statistical analysis.
+2. Your original locked model can still be used for external validation.
+3. For DeLong test, use saved dm_prob_class_1 and dm_true from each model/baseline.
+4. For Dunnett-type MAE comparison, use saved age_abs_error at the subject level.
