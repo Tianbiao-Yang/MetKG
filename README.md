@@ -168,16 +168,24 @@ Typical outputs include:
 
 If you use MetKG in your research, please cite this repository or the related manuscript when available.
 
-```text
-Tianbiao Yang, & Wei Jia. (2026). A knowledge graph guided framework for interpretable metabolomics (Version v0.1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23660301
+> Tianbiao Yang, & Wei Jia. (2026). *A knowledge graph guided framework for interpretable metabolomics* (Version v0.1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23660301
+
+### BibTeX
+
+```bibtex
+@software{yang_2026_metkg,
+  author       = {Tianbiao Yang and Wei Jia},
+  title        = {A knowledge graph guided framework for interpretable metabolomics},
+  year         = {2026},
+  version      = {v0.1.1},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.23660301},
+  url          = {https://doi.org/10.5281/zenodo.23660301}
+}
 ```
 
 ---
 
 ## 8. Contact
 
-For questions, suggestions, or feedback, please contact:
-
-```text
-tianbiao_yang at 126 dot com
-```
+For questions, suggestions, or feedback, please contact: tianbiao_yang at 126 dot com
