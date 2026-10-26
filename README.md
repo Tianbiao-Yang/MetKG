@@ -169,7 +169,7 @@ Typical outputs include:
 If you use MetKG in your research, please cite this repository or the related manuscript when available.
 
 ```text
-MetKG: A knowledge graph-guided framework for interpretable metabolomics
+Tianbiao Yang, & Wei Jia. (2026). A knowledge graph guided framework for interpretable metabolomics (Version v0.1.1) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23660301
 ```
 
 ---
