@@ -24,9 +24,9 @@ The main functions of this repository include:
 
 ```text
 MetKG/
-├── model_metkg_train_validation.py      # Model training and validation
-├── model_metkg_train_run.py             # Final model training
-├── model_metkg_prediction.py            # Prediction using the trained model
+├── code/model_metkg_train_validation.py      # Model training and validation
+├── code/model_metkg_train_run.py             # Final model training
+├── code/model_metkg_prediction.py            # Prediction using the trained model
 ├── metkg.yml                            # Conda environment file
 ├── metkgpip.txt                         # Pip requirements file
 ├── saved_models/                        # Directory for trained models
@@ -81,13 +81,13 @@ https://pytorch-geometric.readthedocs.io/
 The MetKG model can be trained and validated by running:
 
 ```bash
-python model_metkg_train_validation.py
+python ./code/model_metkg_train_validation.py
 ```
 
 After model validation, the final model can be trained by running:
 
 ```bash
-python model_metkg_train_run.py
+python ./code/model_metkg_train_run.py
 ```
 
 The trained model will be saved in the `saved_models/` directory.
@@ -105,7 +105,7 @@ The trained model is saved at:
 To perform prediction using the trained model, run:
 
 ```bash
-python model_metkg_prediction.py
+python ./code/model_metkg_prediction.py
 ```
 
 The prediction results will be saved in:
