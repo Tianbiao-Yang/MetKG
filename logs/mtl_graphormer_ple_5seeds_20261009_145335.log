@@ -38,7 +38,7 @@ Fixed held-out test set size, original 20%: 10077
 Important: The fixed test set will not be used for early stopping or hyperparameter tuning.
 
 Starting 5-seed internal validation experiment
-The fixed 20% test set will remain unchanged across all seeds.
+The fixed 20% test set will remain.
 Within the original 80% development set, validation is carved out separately for each seed.
 
 
@@ -544,10 +544,3 @@ test_dm_acc: 0.858410 ± 0.002750
 test_dm_auc: 0.927518 ± 0.001144
 
 Saved mean±SD summary to: ../results/internal_5seeds/test_metrics_5seeds_mean_sd_20261009_145335.csv
-
-Experiment finished.
-Reminder:
-1. These 5-seed results are for internal robustness/statistical analysis.
-2. Your original locked model can still be used for external validation.
-3. For DeLong test, use saved dm_prob_class_1 and dm_true from each model/baseline.
-4. For Dunnett-type MAE comparison, use saved age_abs_error at the subject level.
